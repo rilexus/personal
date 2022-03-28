@@ -1,11 +1,8 @@
-import * as React from "react"
-import {
-  HeaderContent,
-  HeaderWrapper,
-  NavStyled,
-} from "./header.style"
-import HeaderLogo from "./header-logo/header-logo"
-import styled from "styled-components"
+import * as React from "react";
+import { HeaderContent, HeaderWrapper, NavStyled } from "./header.style";
+import HeaderLogo from "./header-logo/header-logo";
+import styled from "styled-components";
+import Link from "next/link";
 
 const Flex = styled.div`
   display: flex;
@@ -13,7 +10,7 @@ const Flex = styled.div`
   height: 100%;
   position: relative;
   align-items: center;
-`
+`;
 
 const LinksWrapper = styled.div`
   a {
@@ -21,13 +18,13 @@ const LinksWrapper = styled.div`
     color: #2b2b2b;
     margin-right: 20px;
   }
-`
+`;
 export enum HeaderType {
   black = "black",
-  white = "white",
+  white = "white"
 }
 interface HeaderPropsI {}
-const Header = ({  }: HeaderPropsI) => {
+const Header = ({}: HeaderPropsI) => {
   return (
     <NavStyled key={"header"}>
       <HeaderWrapper>
@@ -37,14 +34,14 @@ const Header = ({  }: HeaderPropsI) => {
               <HeaderLogo />
             </div>
             <LinksWrapper>
-              <a href={"/collaborations"}>Collaborations</a>
-              <a href={"/contact"}>Contact</a>
+              <Link href={"/collaborations"}>Collaborations</Link>
+              <Link href={"/contact"}>Contact</Link>
             </LinksWrapper>
           </Flex>
         </HeaderContent>
       </HeaderWrapper>
     </NavStyled>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
