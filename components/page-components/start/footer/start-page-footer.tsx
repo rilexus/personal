@@ -64,7 +64,7 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
               <Greeting>Hi! I’m Stanislav,</Greeting>
               <Exlpination>
                 Stanislav Panchenko and I’m crazy about web design and UX&UI.
-                I’m currently located in Aachen, Germany and work as a frontend
+                I’m currently located in Passau, Germany and work as a frontend
                 developer.
               </Exlpination>
               <ParagraphStyled>
