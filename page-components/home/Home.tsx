@@ -1,11 +1,10 @@
 import React, { FC, useEffect } from "react";
+import styled from "styled-components";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import {
   EasingFunctionNames,
   useMapScrollToValue
 } from "../../hooks/useMapedValue";
-import SEO from "../../components/seo";
-import { SchemaOrg } from "../../components/schema-org/SchemaOrg";
 import Header from "../../components/header/header";
 import PageTitle from "../../components/page-title/page-title";
 import Opacity from "../../components/opacity/opacity";
@@ -26,9 +25,8 @@ import TechList from "../../components/page-components/start/tech-list/tech-list
 import LetsChatSection from "../../components/page-components/start/lets-chat/lets-chat";
 import StartPageFooter from "../../components/page-components/start/footer/start-page-footer";
 import { printFace } from "./utils/print-face";
-import { PERSONAL_SCHEMA } from "./schemas/personal.schema";
-import styled from "styled-components";
 import { Section } from "../../components/section/Section";
+import { HomeHead } from "../../components/page-components/start/HomeHead";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -155,8 +153,7 @@ const Home = () => {
 
   return (
     <div>
-      <SEO title="Start" />
-      <SchemaOrg data={PERSONAL_SCHEMA} />
+      <HomeHead />
       <Header />
       <PageTitle title={"Home"} />
       <Opacity opacity={mappedOpacityValue}>
