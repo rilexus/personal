@@ -1,3 +1,4 @@
+// v1.0.0
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Home as HomePage } from '../page-components/home'
