@@ -1,12 +1,7 @@
-import styled from "styled-components"
-import { ThemePropsI } from "../../providers/swith-theme/themes/default.theme"
+import styled from "styled-components";
+import paragraphCss from "./paragraph.css";
 
-export const ParagraphStyled = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.47059;
-  font-weight: 400;
-  letter-spacing: -.022em; 
-  color: ${({theme}:ThemePropsI)=>theme.colors.text.prime};
-  text-rendering: geometricPrecision;
- 
-`
+const ParagraphStyled = styled.p`
+  ${paragraphCss};
+`;
+export default ParagraphStyled;

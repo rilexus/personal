@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ParagraphStyled } from "../../components/pragraph/pragraph.style";
+import { ParagraphStyled } from "../../components/pragraph";
 import { ExternalLink } from "../../components/external-link/ExternalLink";
 import DropdownListElement from "../../components/dropdown-list/dropdown-list-element/DropdownListElement";
 import ContentH3 from "./ContentH3";

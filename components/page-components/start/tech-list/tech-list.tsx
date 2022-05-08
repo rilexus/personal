@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { PoseGroup } from "react-pose";
 import { useState } from "react";
-import { ParagraphStyled } from "../../../pragraph/pragraph.style";
+import { ParagraphStyled } from "../../../pragraph";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
 import Align from "../../../align/align";
 import { TechIntro } from "./components/tech-info/tech-info";

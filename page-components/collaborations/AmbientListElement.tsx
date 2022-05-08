@@ -2,7 +2,7 @@ import React from "react";
 import ElemHeader from "./ElementHeader";
 import ElemContentWrapper from "./ElementContentWrapper";
 import ContentH3 from "./ContentH3";
-import { ParagraphStyled } from "../../components/pragraph/pragraph.style";
+import { ParagraphStyled } from "../../components/pragraph";
 import { ExternalLink } from "../../components/external-link/ExternalLink";
 import DropdownListElement from "../../components/dropdown-list/dropdown-list-element/DropdownListElement";
 

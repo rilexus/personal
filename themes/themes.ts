@@ -1,5 +1,5 @@
-import { defaultTheme } from "./default"
+import { defaultTheme } from "./default";
 
 export const themes = {
   default: defaultTheme
-}
+};

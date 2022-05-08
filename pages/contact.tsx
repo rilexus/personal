@@ -9,7 +9,7 @@ import SEO from "../components/seo";
 import posed, { PoseGroup } from "react-pose";
 import MainButton from "../components/main-button/main-button";
 import styled from "styled-components";
-import { ParagraphStyled } from "../components/pragraph/pragraph.style";
+import { ParagraphStyled } from "../components/pragraph";
 import { CenterMargin } from "../components/center-margin/center-margin.styled";
 import Email from "../components/email/email";
 

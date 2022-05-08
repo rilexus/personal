@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ListTitleStyled } from "../../../list/list-title/list-title";
 import { ListSubtitleStyled } from "../../../list/list-subtitle/list-subtitle";
-import { ParagraphStyled } from "../../../pragraph/pragraph.style";
+import { ParagraphStyled } from "../../../pragraph";
 import { useRef } from "react";
 import posed from "react-pose";
 import { LiElemStyled } from "../../../list/li-elem/li-elem";

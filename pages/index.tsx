@@ -5,11 +5,6 @@ import { Home as HomePage } from '../page-components/home'
 import {useEffect} from "react";
 
 const Home: NextPage = () => {
-    useEffect(() => {
-        fetch('/api/articles').then(s => s.json()).then(r => {
-            console.log(r);
-        })
-    }, []);
   return (
     <div >
       <Head>

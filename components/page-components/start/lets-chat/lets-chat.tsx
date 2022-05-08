@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
-import { ParagraphStyled } from "../../../pragraph/pragraph.style";
+import { ParagraphStyled } from "../../../pragraph";
 import MainButton from "../../../main-button/main-button";
 import Align from "../../../align/align";
 import { LetsChat } from "../../../../pages/contact";

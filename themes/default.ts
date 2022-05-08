@@ -1,5 +1,6 @@
 export const defaultTheme = {
   colors: {
-    blue: '#00f',
-  }
-}
+    blue: "#00f"
+  },
+  breakpoints: {}
+};

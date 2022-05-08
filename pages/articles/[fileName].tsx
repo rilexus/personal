@@ -1,7 +1,8 @@
 import React from "react";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
-import { v4 as uuid } from "uuid";
+import { Children } from "../../page-components";
+import { Center } from "../../components";
 
 async function toString(readable: any) {
   let res = "";
@@ -11,66 +12,19 @@ async function toString(readable: any) {
   return res;
 }
 
-function Code({ value }: any) {
-  return <pre>{value}</pre>;
-}
-
-function Paragraph({ _children }: any) {
-  return (
-    <p>
-      <Children _children={_children} />
-    </p>
-  );
-}
-
-const Text = ({ value }: any) => {
-  return value;
-};
-
-function Heading({ depth, _children }: any) {
-  if (depth === 1) {
-    return (
-      <h1>
-        <Children _children={_children} />
-      </h1>
-    );
-  }
-  if (depth === 2) {
-    return (
-      <h2>
-        <Children _children={_children} />
-      </h2>
-    );
-  }
-  return null;
-}
-
-function Children({ _children }: any) {
-  return (
-    <>
-      {_children.map(({ type, value, children, depth }: any) => {
-        if (type === "heading") {
-          return <Heading _children={children} depth={depth} key={uuid()} />;
-        }
-        if (type === "code") {
-          return <Code value={value} key={uuid()} />;
-        }
-        if (type === "paragraph") {
-          return <Paragraph _children={children} key={uuid()} />;
-        }
-        if (type === "text") {
-          return <Text value={value} key={uuid()} />;
-        }
-        return null;
-      })}
-    </>
-  );
-}
-
 function ArticlePage({ tree }: any) {
   return (
     <div>
-      <Children _children={tree?.children ?? []} />
+      <div
+        style={{
+          paddingBottom: "4rem"
+        }}
+      />
+      <Center xsm={95} sm={80} md={70} xl={50}>
+        <article>
+          <Children _children={tree?.children ?? []} />
+        </article>
+      </Center>
     </div>
   );
 }

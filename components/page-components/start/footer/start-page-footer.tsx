@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import Layout from "../../../layout/layout";
-import { ParagraphStyled } from "../../../pragraph/pragraph.style";
+import { ParagraphStyled } from "../../../pragraph";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
 import { Icons } from "../../../../icons";
 import { IconLink } from "../../../icon-link";
