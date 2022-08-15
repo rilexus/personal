@@ -12,6 +12,15 @@ import styled from "styled-components";
 import { ParagraphStyled } from "../components/pragraph";
 import { CenterMargin } from "../components/center-margin/center-margin.styled";
 import Email from "../components/email/email";
+import {
+  FamilyName,
+  GivenName,
+  MakesOffer,
+  Person,
+  SameAs
+} from "@react-microdata/person";
+import { Url } from "@react-microdata/offer";
+import { Email as EmailItemProp } from "@react-microdata/person/dist/src/itemProps/Email";
 
 export const LetsChat = styled.div`
   font-size: 2.24rem;
@@ -76,9 +85,42 @@ const Contact = () => {
                     best practices.
                   </ParagraphStyled>
                 </CenterMargin>
-                <MainButton>
-                  <Email />
-                </MainButton>
+
+                <Person>
+                  <MakesOffer.Offer
+                    style={{
+                      display: "none"
+                    }}
+                  >
+                    <Url>https://stanislavpanchenko.de#service-list</Url>
+                  </MakesOffer.Offer>
+                  <GivenName
+                    style={{
+                      display: "none"
+                    }}
+                  >
+                    Stanislav
+                  </GivenName>
+                  <FamilyName
+                    style={{
+                      display: "none"
+                    }}
+                  >
+                    Panchenko
+                  </FamilyName>
+                  <SameAs.URL
+                    style={{
+                      display: "none"
+                    }}
+                  >
+                    https://www.linkedin.com/in/stanislav-p-98b254192/
+                  </SameAs.URL>
+                  <EmailItemProp>
+                    <MainButton>
+                      <Email />
+                    </MainButton>
+                  </EmailItemProp>
+                </Person>
               </div>
             </GrowAnimation>
           </PoseGroup>

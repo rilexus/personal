@@ -4,11 +4,11 @@ import Tooltip from "../../../../../Tooltip/Tooltip";
 import posed from "react-pose";
 import styled from "styled-components";
 import { forwardRef } from "react";
-
+import { Image, Name } from "@react-microdata/list-item";
 const IconWrapper = styled.div<any>`
   margin: 5px;
 `;
-const Img = styled.img`
+const Img = styled(props => <Image as={"img"} {...props} />)`
   transition: transform 120ms;
   cursor: pointer;
   margin: 0;
@@ -36,6 +36,13 @@ const Icon = forwardRef(function Icon({ icon }: any, ref: any) {
   const pos = event.target?.getBoundingClientRect();
   return (
     <IconWrapper {...bind} ref={ref}>
+      <Name
+        style={{
+          display: "none"
+        }}
+      >
+        {icon.name}
+      </Name>
       <Tooltip
         visible={event.hovered}
         left={pos && pos.left + pos.width / 2}

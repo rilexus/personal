@@ -6,13 +6,12 @@ import { ParagraphStyled } from "../../../pragraph";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
 import Align from "../../../align/align";
 import { TechIntro } from "./components/tech-info/tech-info";
-import {
-  techIcons,
-  TechScrollView
-} from "./components/tech-scroll-view/tech-scroll-view";
+import { TechScrollView } from "./components/tech-scroll-view/tech-scroll-view";
 import { Section } from "../../../section/Section";
 import { FadeInTransition } from "./transitions/FadeIn.transition";
 import { Flex } from "../../../flex/Flex";
+import { ItemList } from "@react-microdata/item-list";
+import techIcons from "./icons.data";
 
 const TechWrapper = styled.div`
   text-align: center;
@@ -35,20 +34,22 @@ export default function TechList() {
               }}
             >
               <Align position={"center"}>
-                <PoseGroup animateOnMount enterPose={"enter"}>
-                  {currIconInfo.map(({ name, desc }, idx) => (
-                    <FadeInTransition key={`curr-icon-${name}`}>
-                      <h3>{name}</h3>
-                      <ParagraphStyled
-                        style={{
-                          height: "200px"
-                        }}
-                      >
-                        {desc}
-                      </ParagraphStyled>
-                    </FadeInTransition>
-                  ))}
-                </PoseGroup>
+                <ItemList>
+                  <PoseGroup animateOnMount enterPose={"enter"}>
+                    {currIconInfo.map(({ name, desc }, idx) => (
+                      <FadeInTransition key={`curr-icon-${name}`}>
+                        <h3>{name}</h3>
+                        <ParagraphStyled
+                          style={{
+                            height: "200px"
+                          }}
+                        >
+                          {desc}
+                        </ParagraphStyled>
+                      </FadeInTransition>
+                    ))}
+                  </PoseGroup>
+                </ItemList>
               </Align>
             </div>
           </CenterMargin>
