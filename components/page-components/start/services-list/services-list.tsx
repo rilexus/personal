@@ -70,7 +70,7 @@ const ServicesList = () => {
     <Section>
       <Viewport height={"100vh"}>
         <LocalBusiness>
-          <PriceRange>100€ - 150€ a hour</PriceRange>
+          <PriceRange as={"meta"} content={"100€ - 150€ a hour"} />
           <BusinessName as={"meta"} content={"Stanislav Panchenko"} />
           <Telephone as={"meta"} content={"+4917645840631"} />
           <Email as={"meta"} content={"email@stanislavpanchenko.de"} />
