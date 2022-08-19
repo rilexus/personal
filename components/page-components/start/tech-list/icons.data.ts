@@ -85,35 +85,6 @@ export const techIcons = [
       "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
     desc:
       "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript."
-  },
-  {
-    name: "Sketch",
-    width: 59,
-    height: 55,
-    url: "https://www.sketch.com",
-    src:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/788px-Sketch_Logo.svg.png",
-    desc:
-      "Sketch is a vector graphics editor, developed by the Dutch company Bohemian Coding. A key difference between Sketch and other vector graphics editors is that Sketch does not include print design features."
-  },
-  {
-    name: "Photoshop",
-    width: 55,
-    height: 55,
-    url: "https://www.adobe.com/products/photoshopfamily.html",
-    src:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1024px-Adobe_Photoshop_CC_icon.svg.png",
-    desc:
-      "Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS. It was originally created in 1988 by Thomas and John Knoll. Since then, this software has become the industry standard not only in raster graphics editing, but in digital art as a whole."
-  },
-  {
-    name: "Intellij",
-    width: 55,
-    height: 55,
-    url: "https://www.jetbrains.com",
-    src: "https://cdn.iconscout.com/icon/free/png-512/intellij-idea-569199.png",
-    desc:
-      "IntelliJ IDEA is a Java integrated development environment for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition. Both can be used for commercial development."
   }
 ];
 

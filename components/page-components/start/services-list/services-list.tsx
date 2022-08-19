@@ -15,7 +15,7 @@ import styled from "styled-components";
 import {
   LocalBusiness,
   Name as BusinessName,
-  MakesOffer,
+  PriceRange,
   Funder,
   Telephone,
   Image as BusinessImage,
@@ -29,7 +29,7 @@ import {
   AddressLocality,
   AddressRegion
 } from "@react-microdata/postal-address";
-import { OfferCatalog, ItemListElement } from "@react-microdata/offer-catalog";
+import { ItemListElement } from "@react-microdata/offer-catalog";
 
 const H3 = styled.h3`
   margin-bottom: 1rem;
@@ -70,6 +70,7 @@ const ServicesList = () => {
     <Section>
       <Viewport height={"100vh"}>
         <LocalBusiness>
+          <PriceRange>100€ - 150€ a hour</PriceRange>
           <BusinessName as={"meta"} content={"Stanislav Panchenko"} />
           <Telephone as={"meta"} content={"+4917645840631"} />
           <Email as={"meta"} content={"email@stanislavpanchenko.de"} />
