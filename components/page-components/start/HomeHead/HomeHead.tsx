@@ -95,9 +95,7 @@ const SchemaScript: VFC<{ schema: any }> = ({ schema }) => {
 const HomeHead = () => {
   return (
     <Head>
-      <title>Stanislav Panchenko: Home Page</title>
-      <SchemaScript schema={PERSONAL_SCHEMA} />
-      <SchemaScript schema={SERVICE_SCHEMA} />
+      <title>Stanislav Panchenko</title>
       <HomeMeta />
     </Head>
   );

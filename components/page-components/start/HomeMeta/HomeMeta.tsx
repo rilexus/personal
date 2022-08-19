@@ -3,17 +3,17 @@ import React from "react";
 
 const meta = {
   title: `Stanislav Panchenko`,
-  description: `Personal site of Stanislav Panchenko.`,
+  description: `Stanislav Panchenko.`,
   author: `Stanislav Panchenko mail@stanislavpanchenko.de`,
   url: "http://www.stanislavpanchenko.de",
   twitterUsername: "@rilexus",
   keywords:
-    "stanislav sanchenko, web developer, aachen, developer, programmierer, ",
+    "stanislav panchenko, web developer, developer, softwareentwickler, freelancer",
   revised: `Stanislav Panchenko: ${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
   identifierURL: "www.stanislavpanchenko.de",
   category: "development",
   rating: "Safe For Kids",
-  ogLocality: "Aachen Germany"
+  ogLocality: "Passau Germany"
 };
 const title = "Start";
 

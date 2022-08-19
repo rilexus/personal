@@ -39,13 +39,6 @@ const CenterIcon = styled.div`
 
 interface StartPageFooterPropsI {}
 const StartPageFooter = ({}: StartPageFooterPropsI) => {
-  // const [animate,setAnimate]= useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setAnimate(true)
-  //   }, 1400)
-  // },[])
-
   const ref = useRef(null);
 
   const animate = useIsInView(ref);
@@ -63,15 +56,12 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
             >
               <Greeting>Hi! I’m Stanislav,</Greeting>
               <Exlpination>
-                Stanislav Panchenko and I’m crazy about web design and UX&UI.
-                I’m currently located in Passau, Germany and work as a frontend
-                developer.
+                freelance, fullstack web developer located in germany.
               </Exlpination>
               <ParagraphStyled>
                 <span>
-                  I’m always excited to start new projects! If you have ideas,
-                  let’s chat about it. Drop me a message and let’s create
-                  awesome sites.
+                  always on the lookout for new, interesting web projects! If
+                  you have a project in mind, drop me a message.
                 </span>
               </ParagraphStyled>
               <CenterIcon>
