@@ -318,6 +318,16 @@
   resolved "https://registry.yarnpkg.com/@react-microdata/list-item/-/list-item-1.0.6.tgz#a58dc921c8c791b5f028b7ecef37423fd36cff0e"
   integrity sha512-PB9TtVCct44oWBj3lysyGkOR7lkmZBMGoTxBPBvcOOKsT9ZtZnzKIL/S9MpAtYtj/R5eqntAYJbbQG+X1joaOA==
 
+"@react-microdata/local-business@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@react-microdata/local-business/-/local-business-1.0.6.tgz#988a75553e551a65f7cd3c20b82cedc875fdfd87"
+  integrity sha512-mVpfb2P6waE4U7RX8awTBJ6F7OkNUkcq7ycTyPGpFUutLnUyngI+ot7t+7w52lQKj3E8T5/HodNMk88UWOcc1A==
+
+"@react-microdata/offer-catalog@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@react-microdata/offer-catalog/-/offer-catalog-1.0.6.tgz#0a6cd70f1115d1532b31fa232559e3e41363e643"
+  integrity sha512-LNFK2wkMjNVx+wPKMVprd0uzisypxQdxyWqHoEqwSQhWqKq9TmXzzjMyG2tVwkpBfbPmH1RoElNNtSio/eBxBQ==
+
 "@react-microdata/offer@1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@react-microdata/offer/-/offer-1.0.6.tgz#78ecc2a651b0b447f995016a707591cddc5f310b"
@@ -328,10 +338,20 @@
   resolved "https://registry.yarnpkg.com/@react-microdata/person/-/person-1.0.6.tgz#1350d3910743aede7b2b2b03e51854ac906987b2"
   integrity sha512-7ftoK4H01KG7aLFQ39WNbPBEmd88MJISbx+/J+bug6pD2s6qdt4keu88tVfxu1EEG35XLA7RZgwJar+YaxUq9w==
 
+"@react-microdata/postal-address@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@react-microdata/postal-address/-/postal-address-1.0.6.tgz#11c9a751b75725929cd0081717dce7472b3836bf"
+  integrity sha512-6RRUW5SHWWxTJdNbf6EgVZnTuQKpfmtR+0OUyANuRcD/b7aeod41P51YUreXg6u2IlxWBcNm45Tlh9UpbaFovA==
+
 "@react-microdata/service@1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@react-microdata/service/-/service-1.0.6.tgz#7e6c8839850d56cf2e3bad21ead89cf1b58c5cfd"
   integrity sha512-lIL+R4dPV6zbn3BOWERsM1tqIpeFI3GS8yYiIud9wO/txeuebrIWCtoABXZNrLzBpFfrOLFgB3iWRp3OCrfLaw==
+
+"@react-microdata/url@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@react-microdata/url/-/url-1.0.6.tgz#5af5278e41f9aac01f0eca4eec6677cc3b7e74e3"
+  integrity sha512-2UCp7wnkWJ2+ezI7ChYKJ8Lk3ADXB2xsaWEQTkkLTBnMrIq28/8pcp/sguGt08Q8keV/8lfQb3lnGsbK+1OPJA==
 
 "@rushstack/eslint-patch@1.0.8":
   version "1.0.8"

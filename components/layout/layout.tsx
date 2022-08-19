@@ -4,29 +4,22 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import * as React from "react"
-import { ReactNode } from "react"
-import styled from "styled-components"
-
+import * as React from "react";
+import { ReactNode } from "react";
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  // padding: 0 0px 1.0875rem 1.45rem;
-  padding: 0;
-`
+  padding: 0 2rem;
+`;
 
 interface LayoutPropsI {
-  children: ReactNode | ReactNode[]
+  children: ReactNode | ReactNode[];
 }
 
 const Layout = ({ children }: LayoutPropsI) => {
+  return <StyledWrapper>{children}</StyledWrapper>;
+};
 
-  return (
-    <>
-      <StyledWrapper>{children}</StyledWrapper>
-    </>
-  )
-}
-
-export default Layout
+export default Layout;
