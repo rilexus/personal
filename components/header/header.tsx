@@ -73,12 +73,12 @@ const Publications = ({ children }: any) => {
       style={{
         position: "relative"
       }}
+      ref={ref}
     >
       <div
         style={{
           cursor: "default"
         }}
-        ref={ref}
         onMouseEnter={open}
       >
         Publications
