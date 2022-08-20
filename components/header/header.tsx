@@ -77,9 +77,10 @@ const Publications = ({ children }: any) => {
     >
       <div
         style={{
-          cursor: "default"
+          cursor: "pointer"
         }}
-        onMouseEnter={open}
+        onClick={open}
+        onTouchStart={open}
       >
         Publications
       </div>
@@ -90,7 +91,6 @@ const Publications = ({ children }: any) => {
           padding: "1rem",
           display: isOpen ? "inherit" : "none"
         }}
-        onMouseLeave={close}
       >
         <ListTitle>Articles</ListTitle>
         <Ul>
