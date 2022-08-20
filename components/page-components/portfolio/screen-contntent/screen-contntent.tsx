@@ -73,10 +73,8 @@ const ScreenContent = () => {
           }}
         >
           <HeroHeadline
-            fontSize={"7rem"}
             style={{
               color: "white",
-
               textShadow: "2px 2px 5px rgba(0,0,0,0.6)"
             }}
           >

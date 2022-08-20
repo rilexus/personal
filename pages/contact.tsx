@@ -65,7 +65,7 @@ const Contact = () => {
                     "https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"
                   }
                 >
-                  <HeroHeadline fontSize={"6rem"}>Call Me</HeroHeadline>
+                  <HeroHeadline>Call Me</HeroHeadline>
                 </PageHeroTitle>
               </GrowAnimation>
             </PoseGroup>
