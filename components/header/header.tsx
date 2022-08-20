@@ -103,9 +103,7 @@ const Publications = ({ children }: any) => {
         <ListTitle>Packages</ListTitle>
         <Ul>
           <li>
-            <Link
-              href={"https://www.npmjs.com/package/react-transitions-library"}
-            >
+            <Link href={"https://rilexus.github.io/react-transitions-library/"}>
               react-transitions-library
             </Link>
           </li>
@@ -115,7 +113,7 @@ const Publications = ({ children }: any) => {
             </Link>
           </li>
           <li>
-            <Link href={"https://www.npmjs.com/settings/nightfall-ui/packages"}>
+            <Link href={"https://github.com/rilexus/nightfall-ui"}>
               Nightfall UI
             </Link>
           </li>
