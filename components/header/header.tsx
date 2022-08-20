@@ -3,7 +3,8 @@ import { HeaderContent, HeaderWrapper, NavStyled } from "./header.style";
 import HeaderLogo from "./header-logo/header-logo";
 import styled from "styled-components";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const Flex = styled.div`
   display: flex;
@@ -65,6 +66,8 @@ const Publications = ({ children }: any) => {
     setOpen(false);
   };
 
+  const ref = useClickOutside(close);
+
   return (
     <div
       style={{
@@ -75,6 +78,7 @@ const Publications = ({ children }: any) => {
         style={{
           cursor: "default"
         }}
+        ref={ref}
         onMouseEnter={open}
       >
         Publications

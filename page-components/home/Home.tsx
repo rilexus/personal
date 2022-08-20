@@ -27,6 +27,7 @@ import StartPageFooter from "../../components/page-components/start/footer/start
 import { printFace } from "./utils/print-face";
 import { Section } from "../../components/section/Section";
 import { HomeHead } from "../../components/page-components/start/HomeHead";
+import elasticFontSize from "../../utils/elasticFontSize";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -50,7 +51,7 @@ const GradientWrapper = styled.span`
 `;
 
 const ClipGradient = styled.h1`
-  font-size: 7rem;
+  ${elasticFontSize(80, 150, 500, 1000)};
   margin: 0;
   margin-bottom: -0.5rem;
   line-height: 1;
@@ -78,6 +79,7 @@ const Gradient: FC = ({ children }) => {
   return (
     <GradientWrapper
       style={{
+        padding: "0.5rem 0",
         background: `linear-gradient(119deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) ${mappedGradientPosition}%, rgba(0, 0, 0, 0) 100%)`,
         opacity: mappedOpacityPosition
       }}
@@ -110,7 +112,7 @@ const Title = () => {
         <PageHeroTitle
           url={"https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"}
         >
-          <HeroHeadline fontSize={"7rem"}>UX&UI</HeroHeadline>
+          <HeroHeadline>UX&UI</HeroHeadline>
         </PageHeroTitle>
         <span
           style={{

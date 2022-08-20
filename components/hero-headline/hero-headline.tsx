@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import * as React from "react";
 import { CSSProperties, FC } from "react";
+import elasticFontSize from "../../utils/elasticFontSize";
 
-const StyledHeroHeadline = styled.h1<{ fontSize: string }>`
-  font-size: ${({ fontSize }) => fontSize || "9rem"};
+const StyledHeroHeadline = styled.h1`
+  ${elasticFontSize(80, 150, 500, 1000)};
   margin: 0;
   margin-bottom: -0.5rem;
   line-height: 1;
@@ -11,15 +12,7 @@ const StyledHeroHeadline = styled.h1<{ fontSize: string }>`
   letter-spacing: -0.005em;
 `;
 
-const HeroHeadline: FC<{ fontSize: string; style?: CSSProperties }> = ({
-  children,
-  fontSize,
-  style
-}) => {
-  return (
-    <StyledHeroHeadline style={style} fontSize={fontSize}>
-      {children}
-    </StyledHeroHeadline>
-  );
+const HeroHeadline: FC<{ style?: CSSProperties }> = ({ children, style }) => {
+  return <StyledHeroHeadline style={style}>{children}</StyledHeroHeadline>;
 };
 export { HeroHeadline };
