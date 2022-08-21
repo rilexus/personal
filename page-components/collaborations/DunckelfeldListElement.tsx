@@ -28,9 +28,7 @@ const DunckelfeldListElement = ({ imgSrc }: any) => {
           for digital communication in Germany. They help brands and companies
           to solve the most diverse challenges of the digital age.
         </ParagraphStyled>
-        <ExternalLink href={"https://www.dunckelfeld.de/en/"}>
-          Website
-        </ExternalLink>
+        <ExternalLink href={"https://dunckelfeld.de/"}>Website</ExternalLink>
       </ElemContentWrapper>
     </DropdownListElement>
   );
