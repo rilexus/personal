@@ -9,7 +9,7 @@ import DropdownListElement from "../../components/dropdown-list/dropdown-list-el
 const Unicepta = ({ imgSrc }: any) => {
   return (
     <DropdownListElement
-      name={"1&1"}
+      name={"unicepta"}
       renderHeader={() => (
         <ElemHeader>
           <img
