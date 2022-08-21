@@ -39,8 +39,8 @@ const PrymListElement = ({ imgSrc }: any) => {
         <H4>Contribution</H4>
         <ParagraphStyled>
           Over a period of one and a half years I was the lead frontend engineer
-          responsible for a distributed team of 6 frontend engineers. The the
-          main project was companies own online store:{" "}
+          responsible for a distributed team of 6 frontend engineers. The main
+          project was companies own online store:{" "}
           <ExternalLink animate={false} href={"https://www.prym.de/"}>
             prym.de
           </ExternalLink>{" "}
