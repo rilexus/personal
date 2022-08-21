@@ -1,14 +1,16 @@
-import React, { ReactNode, useRef } from "react"
-import styled from "styled-components"
-import { useIsInView } from "../../hooks/useIsinView"
+import React, { ReactNode, useRef } from "react";
+import styled from "styled-components";
+import { useIsInView } from "../../hooks/useIsinView";
 
-const MainButtonStyled = styled.span`
+const MainButtonStyled = styled.div`
   background-color: #272727;
   color: #e0e0e0;
   border: none;
   outline: none;
   border-radius: 0.4rem;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+
+  max-width: 300px;
 
   font-size: 0.8rem;
   font-weight: 600;
@@ -23,19 +25,18 @@ const MainButtonStyled = styled.span`
     text-decoration: none;
     color: #e0e0e0;
   }
-`
+`;
 interface Props {
-  children: ReactNode | ReactNode[]
-  onClick?: (e: any) => void
+  children: ReactNode | ReactNode[];
+  onClick?: (e: any) => void;
 }
 const MainButton = ({ children, onClick }: Props) => {
-  const ref = useRef(null)
-  const inView = useIsInView(ref)
+  const ref = useRef(null);
   return (
     <MainButtonStyled ref={ref} onClick={onClick}>
       {children}
     </MainButtonStyled>
-  )
-}
+  );
+};
 
-export default MainButton
+export default MainButton;

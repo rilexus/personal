@@ -111,7 +111,7 @@ const ServicesList = () => {
             </PersonImage.URL>
           </Funder.Person>
           <ListTitleStyled>I work as</ListTitleStyled>
-          <ListSubtitleStyled>Fullstack Developer</ListSubtitleStyled>
+          <ListSubtitleStyled>Fullstack Web Developer</ListSubtitleStyled>
           <HasOfferCatalog.OfferCatalog>
             <UlAnimated
               ref={listAnimationRef}
@@ -126,11 +126,12 @@ const ServicesList = () => {
                     </ServiceType>
                     <Description>
                       <ParagraphStyled>
-                        Development of complex frontend systems with React or
-                        plain JavaScript. I’m a programmer with good
-                        understanding of UX and user needs. I know best
-                        practices from programmer and designer point of view and
-                        I combine them in my development process.
+                        Development of complex frontend systems with React and
+                        plain JavaScript. Familiar with
+                        CSS/SCSS/Styled-Components and the common styling
+                        solutions. I’m a programmer with good understanding of
+                        UX&UI. I know the best practices from programmer and
+                        designer point of view.
                       </ParagraphStyled>
                     </Description>
                   </ItemOffered.Service>
@@ -144,8 +145,9 @@ const ServicesList = () => {
                     </ServiceType>
                     <Description>
                       <ParagraphStyled>
-                        development of single REST endpoint or micro services,
-                        mainly with NodeJS.
+                        Implementation of interfaces to connect the external web
+                        services. Development of REST endpoints or micro
+                        services, mainly with node and nestjs.
                       </ParagraphStyled>
                     </Description>
                   </ItemOffered.Service>
@@ -175,11 +177,10 @@ const ServicesList = () => {
                     </ServiceType>
                     <Description>
                       <ParagraphStyled>
-                        Design is a repetitive process. To adjust the products
-                        functionality to the users core needs, it necessary to
-                        create prototypes and to iterate through design
-                        sketches. I’m convinced that a quick prototype and a
-                        rough sketch always saves a lot of development hours.
+                        Design is a repetitive process. To adjust the product to
+                        the users core needs, it is necessary to iterate through
+                        the design. A quick prototype and a rough design sketch
+                        always saves a lot of development hours.
                       </ParagraphStyled>
                     </Description>
                   </ItemOffered.Service>

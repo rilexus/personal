@@ -1,9 +1,14 @@
 import * as React from "react";
 import { FC } from "react";
+import styled from "styled-components";
+import elasticFontSize from "../../utils/elasticFontSize";
+
+const Styled = styled.h3`
+  margin-bottom: 1.5rem;
+  ${elasticFontSize(20, 40, 1, 500)};
+`;
 
 const ContentH3: FC = ({ children }) => {
-  return (
-    <h3 style={{ fontSize: "3rem", marginBottom: "1.5rem" }}>{children}</h3>
-  );
+  return <Styled>{children}</Styled>;
 };
 export default ContentH3;

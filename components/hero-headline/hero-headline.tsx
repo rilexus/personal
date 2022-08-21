@@ -4,7 +4,7 @@ import { CSSProperties, FC } from "react";
 import elasticFontSize from "../../utils/elasticFontSize";
 
 const StyledHeroHeadline = styled.h1`
-  ${elasticFontSize(80, 150, 500, 1000)};
+  ${elasticFontSize(60, 130, 500, 1000)};
   margin: 0;
   margin-bottom: -0.5rem;
   line-height: 1;

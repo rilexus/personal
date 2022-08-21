@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 85px;
   align-items: center;
-  margin: 20vh 0 5vh 0;
+  margin: 8vh 0 5vh 0;
 `;
 const VisibleViewStyled = styled.div`
   top: 0;

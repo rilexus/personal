@@ -8,7 +8,7 @@ const ElemHeader: FC = ({ children }) => {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        height: "35vh",
+        height: "15vh",
         paddingLeft: "3rem"
       }}
     >

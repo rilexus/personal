@@ -12,6 +12,7 @@ import SlideUpTransition from "../../../../transitions/SlideUp.transition";
 import { useAppearFromBottom } from "../../../../hooks/useAppearFromBottom";
 import Email from "../../../email/email";
 import { Section } from "../../../section/Section";
+import { Flex } from "../../../flex/Flex";
 
 const Gradient = styled.div`
   position: relative;
@@ -46,14 +47,23 @@ const LetsChatSection = () => {
                     <LetsChat>Lets Chat!</LetsChat>
                     <CenterMargin>
                       <ParagraphStyled>
-                        If you have a project in mind let&lsquo;s chat about it.
-                        I will be happy to hear your ideas and give you feedback
-                        on best practices.
+                        Are you looking for a freelancer to support your
+                        project? I can help you! Lets have an introductory call,
+                        sprint meeting or a kick-off. Ill get the necessary
+                        requirements and I can start right away. Though my
+                        experience im familiar with the common setups and tools.
                       </ParagraphStyled>
                     </CenterMargin>
-                    <MainButton>
-                      <Email />
-                    </MainButton>
+                    <Flex justify={"center"} align={"center"}>
+                      <MainButton>
+                        <Email />
+                      </MainButton>
+                    </Flex>
+                    <div
+                      style={{
+                        marginBottom: "1rem"
+                      }}
+                    />
                   </SlideUpTransition>
                 </FadeinAnimation>
               </div>

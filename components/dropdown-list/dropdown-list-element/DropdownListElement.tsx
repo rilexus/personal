@@ -67,8 +67,6 @@ function DropdownListElement({
       <div
         ref={contentWrapperRef}
         style={{
-          // hide/show content animated
-          paddingLeft: "3rem",
           transition: "height 400ms",
           height: `${elements[name] ? contentRef.current?.offsetHeight : 0}px`,
           overflow: "hidden"

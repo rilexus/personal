@@ -28,6 +28,7 @@ import { printFace } from "./utils/print-face";
 import { Section } from "../../components/section/Section";
 import { HomeHead } from "../../components/page-components/start/HomeHead";
 import elasticFontSize from "../../utils/elasticFontSize";
+import { ParagraphStyled } from "../../components";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -51,7 +52,7 @@ const GradientWrapper = styled.span`
 `;
 
 const ClipGradient = styled.h1`
-  ${elasticFontSize(80, 150, 500, 1000)};
+  ${elasticFontSize(60, 130, 500, 1000)};
   margin: 0;
   margin-bottom: -0.5rem;
   line-height: 1;
@@ -112,7 +113,7 @@ const Title = () => {
         <PageHeroTitle
           url={"https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"}
         >
-          <HeroHeadline>UX&UI</HeroHeadline>
+          <HeroHeadline>Stanislav Panchenko</HeroHeadline>
         </PageHeroTitle>
         <span
           style={{
@@ -122,17 +123,20 @@ const Title = () => {
             position: "absolute"
           }}
         >
-          <GradientTitle>UX&UI</GradientTitle>
+          <GradientTitle>Stanislav Panchenko</GradientTitle>
         </span>
       </AppearTransition>
       <AppearTransition duration={1000} delay={1400}>
-        <HeroSubtitle>unique web solutions</HeroSubtitle>
+        <HeroSubtitle>
+          web developer · react expert · fullstack developer
+        </HeroSubtitle>
       </AppearTransition>
       <AppearTransition duration={1000} delay={1800}>
         <CenterMargin>
           <IntroText>
-            Every business has its unique features, story and products and
-            technology should support and enhance it.
+            Do you have a project in mind and you&lsquo;re looking for a web
+            developer? Get in touch with me and we will look over the project
+            requirements together.
           </IntroText>
         </CenterMargin>
       </AppearTransition>
