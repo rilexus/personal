@@ -21,6 +21,7 @@ import {
 } from "@react-microdata/person";
 import { Url } from "@react-microdata/offer";
 import { Email as EmailItemProp } from "@react-microdata/person/dist/src/itemProps/Email";
+import { Flex } from "../components/flex/Flex";
 
 export const LetsChat = styled.div`
   font-size: 2.24rem;
@@ -116,9 +117,11 @@ const Contact = () => {
                     https://www.linkedin.com/in/stanislav-p-98b254192/
                   </SameAs.URL>
                   <EmailItemProp>
-                    <MainButton>
-                      <Email />
-                    </MainButton>
+                    <Flex justify={"center"} align={"center"}>
+                      <MainButton>
+                        <Email />
+                      </MainButton>
+                    </Flex>
                   </EmailItemProp>
                 </Person>
               </div>
