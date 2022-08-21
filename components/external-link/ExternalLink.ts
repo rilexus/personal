@@ -1,16 +1,21 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const ExternalLink = styled.a`
+export const ExternalLink = styled.a<{ animate?: boolean }>`
   font-size: 1.1rem;
   text-decoration: none;
   color: blue;
   position: relative;
-  &:hover {
+  ${({ animate }) => {
+    if (animate === false) {
+      return "";
+    }
+    return `&:hover {
     &:after {
       transform: translateX(1rem) translateY(-50%) rotate(-45deg);
       opacity: 1;
     }
-  }
+  }`;
+  }}
   &:after {
     content: " ";
     width: 0.5rem;

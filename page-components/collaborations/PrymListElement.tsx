@@ -5,6 +5,8 @@ import ElemContentWrapper from "./ElementContentWrapper";
 import ContentH3 from "./ContentH3";
 import { ParagraphStyled } from "../../components/pragraph";
 import { ExternalLink } from "../../components/external-link/ExternalLink";
+import VerticalSpacer from "../../ui/VerticalSpacer/VerticalSpacer";
+import H4 from "../../ui/H4/H4";
 
 const PrymListElement = ({ imgSrc }: any) => {
   return (
@@ -33,6 +35,30 @@ const PrymListElement = ({ imgSrc }: any) => {
           and dressmaking.
         </ParagraphStyled>
         <ExternalLink href={"https://www.prym.de/"}>Website</ExternalLink>
+        <VerticalSpacer value={"2rem"} />
+        <H4>Contribution</H4>
+        <ParagraphStyled>
+          Over a period of one and a half years I was the lead frontend engineer
+          responsible for a distributed team of 6 frontend engineers. The the
+          main project was companies own online store:{" "}
+          <ExternalLink animate={false} href={"https://www.prym.de/"}>
+            prym.de
+          </ExternalLink>{" "}
+          with over 15000 products. By side the technical implementation of the
+          store, my duties were: growing, onboarding and educating the current
+          team.
+        </ParagraphStyled>
+        <VerticalSpacer value={"2rem"} />
+        <b>Tech</b>
+        <VerticalSpacer value={"1rem"} />
+        <ul>
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>Redux</li>
+          <li>Jest</li>
+          <li>SCSS</li>
+          <li>CSS</li>
+        </ul>
       </ElemContentWrapper>
     </DropdownListElement>
   );
