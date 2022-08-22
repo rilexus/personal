@@ -110,8 +110,8 @@ const ServicesList = () => {
               </div>
             </PersonImage.URL>
           </Funder.Person>
-          <ListTitleStyled>I work as</ListTitleStyled>
-          <ListSubtitleStyled>Fullstack Web Developer</ListSubtitleStyled>
+          <ListTitleStyled>Services</ListTitleStyled>
+          <ListSubtitleStyled>Fullstack Development</ListSubtitleStyled>
           <HasOfferCatalog.OfferCatalog>
             <UlAnimated
               ref={listAnimationRef}
