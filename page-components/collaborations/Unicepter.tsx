@@ -17,8 +17,8 @@ const Unicepta = ({ imgSrc }: any) => {
           <img
             src={imgSrc}
             alt="unicepta brand logo"
-            height={105}
-            width={200}
+            height={205}
+            width={220}
           />
         </ElemHeader>
       )}

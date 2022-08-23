@@ -20,7 +20,7 @@ const Collaborations = () => {
   const oneAndOne =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/240px-1%261_logo.svg.png";
   const unicepter =
-    "https://www.unicepta.com/fileadmin/_processed_/7/c/csm_youtube_profil_800x800_197358dc6d.jpg";
+    "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/bhk13wldvkqfzrg3wioz";
   return (
     <div>
       <SEO title="Collaborations" />
