@@ -34,7 +34,7 @@ export const LetsChat = styled.div`
 const GrowAnimation = posed.div({
   init: {
     opacity: 0,
-    scale: 0.6
+    scale: 0.8
   },
   enter: {
     opacity: 1,
@@ -56,20 +56,20 @@ const Contact = () => {
         <Align position={"center"}>
           <div
             style={{
-              marginTop: "10vh"
+              marginTop: "30vh"
             }}
           >
-            <PoseGroup animateOnMount exitPose={"enter"}>
-              <GrowAnimation key={"grow-animation"} duration={900}>
-                <PageHeroTitle
-                  url={
-                    "https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"
-                  }
-                >
-                  <HeroHeadline>Call Me</HeroHeadline>
-                </PageHeroTitle>
-              </GrowAnimation>
-            </PoseGroup>
+            {/*<PoseGroup animateOnMount exitPose={"enter"}>*/}
+            {/*  <GrowAnimation key={"grow-animation"} duration={900}>*/}
+            {/*    <PageHeroTitle*/}
+            {/*      url={*/}
+            {/*        "https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"*/}
+            {/*      }*/}
+            {/*    >*/}
+            {/*      <HeroHeadline>Call Me</HeroHeadline>*/}
+            {/*    </PageHeroTitle>*/}
+            {/*  </GrowAnimation>*/}
+            {/*</PoseGroup>*/}
           </div>
           <PoseGroup animateOnMount exitPose={"enter"}>
             <GrowAnimation key={"grow-animation-button"} duration={700}>
@@ -81,9 +81,8 @@ const Contact = () => {
                 <LetsChat>Lets Chat!</LetsChat>
                 <CenterMargin>
                   <ParagraphStyled>
-                    If you have a project in mind let&lsquo;s chat about it. I
-                    will be happy to hear your ideas and give you feedback on
-                    best practices.
+                    You have a project in mind? Great! Let&lsquo;s chat about
+                    it. <br />I will be happy to hear your ideas.
                   </ParagraphStyled>
                 </CenterMargin>
 
