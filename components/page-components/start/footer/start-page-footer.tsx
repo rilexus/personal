@@ -5,11 +5,11 @@ import { ParagraphStyled } from "../../../pragraph";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
 import { Icons } from "../../../../icons";
 import { IconLink } from "../../../icon-link";
-import Align from "../../../align/align";
-import { Section } from "../../../section/Section";
 import { Signature } from "../../../Signature";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useIsInView } from "../../../../hooks/useIsinView";
+import { Person, Name, SameAs, Image } from "@react-microdata/person";
+import { sm } from "../../../../css/media-queries";
 
 const Background = styled.div<{ opacity?: number }>`
   background-color: #fbfcfd;
@@ -37,6 +37,20 @@ const CenterIcon = styled.div`
   }
 `;
 
+const ImgWrapper = styled.div`
+  overflow: hidden;
+  margin-left: -5rem;
+  margin-right: -5rem;
+  ${sm`
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 500px;
+
+    width: 300px;
+    height: 300px;
+  `}
+`;
+
 interface StartPageFooterPropsI {}
 const StartPageFooter = ({}: StartPageFooterPropsI) => {
   const ref = useRef(null);
@@ -48,15 +62,33 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
       <Background>
         <Layout>
           <CenterMargin>
-            <div
+            <Person
               ref={ref}
               style={{
-                margin: "0 35px"
+                margin: "0 35px",
+                textAlign: "center"
               }}
             >
-              <Greeting>Hi! I’m Stanislav,</Greeting>
+              <div
+                style={{
+                  marginBottom: "3rem",
+                  display: "flex",
+                  justifyContent: "center"
+                }}
+              >
+                <ImgWrapper>
+                  <Image
+                    as={"img"}
+                    src="https://avatars.githubusercontent.com/u/28537457?v=4"
+                    alt=""
+                  />
+                </ImgWrapper>
+              </div>
+              <Greeting>
+                Hi! I’m <Name as={"span"}>Stanislav</Name>,
+              </Greeting>
               <Exlpination>
-                freelance, fullstack web developer located in germany.
+                freelance, fullstack web developer located in Germany.
               </Exlpination>
               <ParagraphStyled>
                 <span>
@@ -65,16 +97,21 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
                 </span>
               </ParagraphStyled>
               <CenterIcon>
+                <SameAs as={"meta"} content={"https://github.com/rilexus"} />
                 <IconLink url={"https://github.com/rilexus"}>
                   {Icons.github}
                 </IconLink>
+                <SameAs
+                  as={"meta"}
+                  content={"https://www.linkedin.com/in/stanislav-p-98b254192/"}
+                />
                 <IconLink
                   url={"https://www.linkedin.com/in/stanislav-p-98b254192/"}
                 >
                   {Icons.linkedin}
                 </IconLink>
               </CenterIcon>
-            </div>
+            </Person>
             <div
               style={{
                 display: "inline-block",

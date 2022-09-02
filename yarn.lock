@@ -308,50 +308,50 @@
     style-value-types "^3.1.7"
     tslib "^1.10.0"
 
-"@react-microdata/item-list@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/item-list/-/item-list-1.0.6.tgz#82d4e5c79851ca8ffa9b3e13cc5a2e7c9e48ecdd"
-  integrity sha512-i+qfzkMp23EcyIMGunWFBPvRGqAMm+7+ebJfi6qSZmCZNxg+wzP1lvz+xbtedXnonNL0/MkBmUH2kFNYlxCZHA==
+"@react-microdata/item-list@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/item-list/-/item-list-1.0.7.tgz#8a78841ead699aaaf23cf1324808c4744f2eba92"
+  integrity sha512-ojAl7duKm+ttIksqw8POQZWqdprgkdQVgI8YvskAUGaA0RhFeq2OC5B8Pe7CbEDUaXu8wJUHVHzUH4awyiCYVg==
 
-"@react-microdata/list-item@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/list-item/-/list-item-1.0.6.tgz#a58dc921c8c791b5f028b7ecef37423fd36cff0e"
-  integrity sha512-PB9TtVCct44oWBj3lysyGkOR7lkmZBMGoTxBPBvcOOKsT9ZtZnzKIL/S9MpAtYtj/R5eqntAYJbbQG+X1joaOA==
+"@react-microdata/list-item@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/list-item/-/list-item-1.0.7.tgz#7162bdbd3380d223ab23656d0c4abf7fe009c63a"
+  integrity sha512-f360GMfLra5UoIYjVhUPYpQkDBu6dj9SbkriUE7HvbzWQahhAK7pAf7AJIL3scuRSB4hVKyPQdPmcdyU+pWyMw==
 
-"@react-microdata/local-business@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/local-business/-/local-business-1.0.6.tgz#988a75553e551a65f7cd3c20b82cedc875fdfd87"
-  integrity sha512-mVpfb2P6waE4U7RX8awTBJ6F7OkNUkcq7ycTyPGpFUutLnUyngI+ot7t+7w52lQKj3E8T5/HodNMk88UWOcc1A==
+"@react-microdata/local-business@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/local-business/-/local-business-1.0.7.tgz#df930494284e3c8392e3203d91c48d121dd149cb"
+  integrity sha512-3eWI82dxS0/HHuvptqBIE1VuddMajyP89aS1GIa+YIymH9bpgqdZ0lCLK94AqWX46prvXKl5tKihQFGV77gwdQ==
 
-"@react-microdata/offer-catalog@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/offer-catalog/-/offer-catalog-1.0.6.tgz#0a6cd70f1115d1532b31fa232559e3e41363e643"
-  integrity sha512-LNFK2wkMjNVx+wPKMVprd0uzisypxQdxyWqHoEqwSQhWqKq9TmXzzjMyG2tVwkpBfbPmH1RoElNNtSio/eBxBQ==
+"@react-microdata/offer-catalog@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/offer-catalog/-/offer-catalog-1.0.7.tgz#68f76fc6a068e5916de436f4e2e5663e51a1a576"
+  integrity sha512-79gQPJkIph4cNzR7rZe2K6uAl4MRpSRu74O2DPVA6huVyMgUg18PUFXoS5959Qo5n7yebpqSo5a2UplKFUAM6w==
 
-"@react-microdata/offer@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/offer/-/offer-1.0.6.tgz#78ecc2a651b0b447f995016a707591cddc5f310b"
-  integrity sha512-VXb3fTFBLCsszXh26Y9/EiRXGbn7w+BKrgbKNzYSiCrc2bZ7WbkuK1/XGaFtQgX0r8WzbCtHCEy70VtGUIp3zg==
+"@react-microdata/offer@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/offer/-/offer-1.0.7.tgz#71a4ca00706996d9147908bb14a948a735b1fe0d"
+  integrity sha512-Y7P/ix8S5Tu6Dd45cvHxk+aLsHQ4nh703kAGlRyjkh7J8ZZ2SmIaAcyWeMf7Tu4ykaaiTN4Bpv7NMaj4p7EGtg==
 
-"@react-microdata/person@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/person/-/person-1.0.6.tgz#1350d3910743aede7b2b2b03e51854ac906987b2"
-  integrity sha512-7ftoK4H01KG7aLFQ39WNbPBEmd88MJISbx+/J+bug6pD2s6qdt4keu88tVfxu1EEG35XLA7RZgwJar+YaxUq9w==
+"@react-microdata/person@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/person/-/person-1.0.7.tgz#d9f66ba23f6bc07e155c4a2ac6ae16518e9fc64c"
+  integrity sha512-hR9AxsfyHvg9zn3rxzGExl5wi6q7yDlmlFxlEG8Eum5fDJpmWjnCM075koam4tlIaGTgepaKbsx8VLJHTzbSuw==
 
-"@react-microdata/postal-address@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/postal-address/-/postal-address-1.0.6.tgz#11c9a751b75725929cd0081717dce7472b3836bf"
-  integrity sha512-6RRUW5SHWWxTJdNbf6EgVZnTuQKpfmtR+0OUyANuRcD/b7aeod41P51YUreXg6u2IlxWBcNm45Tlh9UpbaFovA==
+"@react-microdata/postal-address@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/postal-address/-/postal-address-1.0.7.tgz#e4c9fa05e760898cca9b784662bb75213c03dfae"
+  integrity sha512-FkOSQPNA0Y4TrTPAKiCIOq96PCKCuk+Ma5XuvMhzQn/VEPQStKRDtXgY25TVc38pLW4NPJa5I75Na+iYTJ2WRw==
 
-"@react-microdata/service@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/service/-/service-1.0.6.tgz#7e6c8839850d56cf2e3bad21ead89cf1b58c5cfd"
-  integrity sha512-lIL+R4dPV6zbn3BOWERsM1tqIpeFI3GS8yYiIud9wO/txeuebrIWCtoABXZNrLzBpFfrOLFgB3iWRp3OCrfLaw==
+"@react-microdata/service@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/service/-/service-1.0.7.tgz#deec075fc428ffc3535886d1ce16b35f8ad991a5"
+  integrity sha512-cpl0nOXpdG5I+QQJXeTCoqCLh+AXav3PGEDqUsOacX0HKieOjTywE4Utuu7Y/H6aqA7WqNBZvTSgZ6AS8g6Mhg==
 
-"@react-microdata/url@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@react-microdata/url/-/url-1.0.6.tgz#5af5278e41f9aac01f0eca4eec6677cc3b7e74e3"
-  integrity sha512-2UCp7wnkWJ2+ezI7ChYKJ8Lk3ADXB2xsaWEQTkkLTBnMrIq28/8pcp/sguGt08Q8keV/8lfQb3lnGsbK+1OPJA==
+"@react-microdata/url@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@react-microdata/url/-/url-1.0.7.tgz#938e36e7ee1c7c4fa3ca8f3eefa5103d1eaa7c47"
+  integrity sha512-2O6OHjJ615lxREHFyEBDyQNwDiz0CyGeyOMtuDHq4/agaRwS64Cyg1QgmNfo3YVn2TSR/hydXaEhrq+0WM/q1w==
 
 "@rushstack/eslint-patch@1.0.8":
   version "1.0.8"

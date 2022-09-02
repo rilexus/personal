@@ -58,19 +58,7 @@ const Contact = () => {
             style={{
               marginTop: "30vh"
             }}
-          >
-            {/*<PoseGroup animateOnMount exitPose={"enter"}>*/}
-            {/*  <GrowAnimation key={"grow-animation"} duration={900}>*/}
-            {/*    <PageHeroTitle*/}
-            {/*      url={*/}
-            {/*        "https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"*/}
-            {/*      }*/}
-            {/*    >*/}
-            {/*      <HeroHeadline>Call Me</HeroHeadline>*/}
-            {/*    </PageHeroTitle>*/}
-            {/*  </GrowAnimation>*/}
-            {/*</PoseGroup>*/}
-          </div>
+          ></div>
           <PoseGroup animateOnMount exitPose={"enter"}>
             <GrowAnimation key={"grow-animation-button"} duration={700}>
               <div

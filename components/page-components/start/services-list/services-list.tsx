@@ -130,8 +130,8 @@ const ServicesList = () => {
                         plain JavaScript. Familiar with
                         CSS/SCSS/Styled-Components and the common styling
                         solutions. I’m a programmer with good understanding of
-                        UX&UI. I know the best practices from programmer and
-                        designer point of view.
+                        UX&UI. I know the best practices from programmer&apos;s
+                        and designer&apos;s point of view.
                       </ParagraphStyled>
                     </Description>
                   </ItemOffered.Service>
