@@ -10,7 +10,9 @@ import Viewport from "../../../viewport/viewport";
 import { useAppearFromBottom } from "../../../../hooks/useAppearFromBottom";
 
 import { ServiceType } from "@react-microdata/service";
-import { ItemOffered, Description } from "@react-microdata/offer";
+
+import { ItemOffered, Description, Offer } from "@react-microdata/offer";
+import { ListItem } from "@react-microdata/list-item";
 import styled from "styled-components";
 import {
   LocalBusiness,
@@ -29,7 +31,7 @@ import {
   AddressLocality,
   AddressRegion
 } from "@react-microdata/postal-address";
-import { ItemListElement } from "@react-microdata/offer-catalog";
+import { ItemListElement, OfferCatalog } from "@react-microdata/offer-catalog";
 
 const H3 = styled.h3`
   margin-bottom: 1rem;
@@ -83,15 +85,11 @@ const ServicesList = () => {
             <AddressLocality>Passau</AddressLocality>
             <AddressRegion>Bavaria</AddressRegion>
           </Address.PostalAddress>
-          <BusinessImage.URL
-            style={{
-              display: "none"
-            }}
-          >
-            <div itemProp={"url"}>
-              https://avatars.githubusercontent.com/u/28537457?v=4
-            </div>
-          </BusinessImage.URL>
+          <BusinessImage
+            as={"meta"}
+            content={"https://avatars.githubusercontent.com/u/28537457?v=4"}
+          />
+
           <Funder.Person>
             <Name as={"meta"} content={"Stanislav Panchenko"} />
             <Email as={"meta"} content={"email@stanislavpanchenko.de"} />
@@ -100,15 +98,10 @@ const ServicesList = () => {
               content={"https://www.linkedin.com/in/stanislav-p-98b254192/"}
             />
             <meta itemProp={"sameAs"} content={"https://github.com/rilexus"} />
-            <PersonImage.URL
-              style={{
-                display: "none"
-              }}
-            >
-              <div itemProp={"url"}>
-                https://avatars.githubusercontent.com/u/28537457?v=4
-              </div>
-            </PersonImage.URL>
+            <PersonImage
+              as={"meta"}
+              content={"https://avatars.githubusercontent.com/u/28537457?v=4"}
+            />
           </Funder.Person>
           <ListTitleStyled>Services</ListTitleStyled>
           <ListSubtitleStyled>Fullstack Development</ListSubtitleStyled>
@@ -119,7 +112,7 @@ const ServicesList = () => {
               pose={listAppeared ? "visible" : "hidden"}
             >
               <LiAnimated key={"Practice"} duration={700}>
-                <ItemListElement>
+                <ItemListElement itemScope itemType="https://schema.org/Offer">
                   <ItemOffered.Service>
                     <ServiceType>
                       <H3>Frontend Development</H3>
@@ -138,7 +131,7 @@ const ServicesList = () => {
                 </ItemListElement>
               </LiAnimated>
               <LiAnimated key={"Full Stack"} duration={700}>
-                <ItemListElement>
+                <Offer itemProp={"ItemListElement"}>
                   <ItemOffered.Service>
                     <ServiceType>
                       <H3>Backend Development</H3>
@@ -151,10 +144,10 @@ const ServicesList = () => {
                       </ParagraphStyled>
                     </Description>
                   </ItemOffered.Service>
-                </ItemListElement>
+                </Offer>
               </LiAnimated>
               <LiAnimated key={"Process"} duration={700}>
-                <ItemListElement>
+                <ItemListElement itemScope itemType="https://schema.org/Offer">
                   <ItemOffered.Service>
                     <ServiceType>
                       <H3>UX Analysis</H3>
@@ -170,7 +163,7 @@ const ServicesList = () => {
                 </ItemListElement>
               </LiAnimated>
               <LiAnimated key={"Prototyping"} duration={700}>
-                <ItemListElement>
+                <ItemListElement itemScope itemType="https://schema.org/Offer">
                   <ItemOffered.Service>
                     <ServiceType>
                       <H3>UI Design</H3>
