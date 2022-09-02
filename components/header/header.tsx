@@ -134,11 +134,13 @@ const Header = ({}: HeaderPropsI) => {
               <HeaderLogo />
             </div>
             <LinksWrapper>
-              <Spacer>
-                <Publications />
-                <Link href={"/collaborations"}>Collaborations</Link>
-                <Link href={"/contact"}>Contact</Link>
-              </Spacer>
+              <nav>
+                <Spacer>
+                  <Publications />
+                  <Link href={"/collaborations"}>Collaborations</Link>
+                  <Link href={"/contact"}>Contact</Link>
+                </Spacer>
+              </nav>
             </LinksWrapper>
           </Flex>
         </HeaderContent>
