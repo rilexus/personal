@@ -136,6 +136,7 @@ const Header = ({}: HeaderPropsI) => {
             <LinksWrapper>
               <nav>
                 <Spacer>
+                  <Link href={"/demos"}>Demos</Link>
                   <Publications />
                   <Link href={"/collaborations"}>Collaborations</Link>
                   <Link href={"/contact"}>Contact</Link>

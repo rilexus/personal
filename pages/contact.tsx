@@ -1,6 +1,4 @@
 import * as React from "react";
-import { HeroHeadline } from "../components/hero-headline/hero-headline";
-import PageHeroTitle from "../components/page-hero-title/page-hero-title";
 import Layout from "../components/layout/layout";
 import Header from "../components/header/header";
 import Align from "../components/align/align";
