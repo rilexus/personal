@@ -72,7 +72,7 @@ const Thumbnail = ({ src, title, subtitle }: any) => {
   );
 };
 
-const Demos = () => {
+const Examples = () => {
   return (
     <div>
       <Header />
@@ -82,10 +82,10 @@ const Demos = () => {
             paddingTop: "4rem"
           }}
         >
-          <H1>My Works</H1>
+          <H1>Examples</H1>
           <IntroText
             style={{
-              marginBottom: "4rem"
+              marginBottom: "3rem"
             }}
           >
             Look what I can do.
@@ -105,4 +105,4 @@ const Demos = () => {
   );
 };
 
-export default Demos;
+export default Examples;
