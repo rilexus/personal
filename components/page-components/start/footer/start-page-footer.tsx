@@ -8,8 +8,21 @@ import { IconLink } from "../../../icon-link";
 import { Signature } from "../../../Signature";
 import { useRef } from "react";
 import { useIsInView } from "../../../../hooks/useIsinView";
-import { Person, Name, SameAs, Image } from "@react-microdata/person";
+import {
+  Person,
+  Name,
+  SameAs,
+  Image,
+  FamilyName,
+  HomeLocation,
+  Address
+} from "@react-microdata/person";
 import { sm } from "../../../../css/media-queries";
+import {
+  AddressCountry,
+  AddressLocality,
+  PostalAddress
+} from "@react-microdata/postal-address";
 
 const Background = styled.div<{ opacity?: number }>`
   background-color: #fbfcfd;
@@ -85,16 +98,20 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
                 </ImgWrapper>
               </div>
               <Greeting>
-                Hi! I’m <Name as={"span"}>Stanislav</Name>,
+                Hi! I’m <Name as={"span"}>Stanislav</Name>{" "}
+                <FamilyName as={"span"}>Panchenko</FamilyName>
               </Greeting>
               <Exlpination>
-                freelance, fullstack web developer located in Germany.
+                <span>freelance, fullstack web developer located in</span>
+                <HomeLocation.Place as={"span"}>
+                  <Address.PostalAddress>
+                    <AddressCountry as={"span"}>Germany</AddressCountry>,{" "}
+                    <AddressLocality as={"span"}>Passau</AddressLocality>
+                  </Address.PostalAddress>
+                </HomeLocation.Place>
               </Exlpination>
               <ParagraphStyled>
-                <span>
-                  always on the lookout for new, interesting web projects! If
-                  you have a project in mind, drop me a message.
-                </span>
+                <span>If you have a project in mind, drop me a message.</span>
               </ParagraphStyled>
               <CenterIcon>
                 <SameAs as={"meta"} content={"https://github.com/rilexus"} />
