@@ -11,7 +11,7 @@ const BREAK_POINT = {
 
 const xsm = (...args: any) => {
   return css`
-    @media (max-width: ${BREAK_POINT.xsm}px) {
+    @media (min-width: ${BREAK_POINT.xsm}px) {
       ${args};
     }
   `;

@@ -28,7 +28,7 @@ import { printFace } from "./utils/print-face";
 import { Section } from "../../components/section/Section";
 import { HomeHead } from "../../components/page-components/start/HomeHead";
 import elasticFontSize from "../../utils/elasticFontSize";
-import { ParagraphStyled } from "../../components";
+import useStyle from "../../hooks/useStyle";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -77,17 +77,16 @@ const Gradient: FC = ({ children }) => {
     height * 2 - 300,
     EasingFunctionNames.expoIn
   );
-  return (
-    <GradientWrapper
-      style={{
-        padding: "0.5rem 0",
-        background: `linear-gradient(119deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) ${mappedGradientPosition}%, rgba(0, 0, 0, 0) 100%)`,
-        opacity: mappedOpacityPosition
-      }}
-    >
-      {children}
-    </GradientWrapper>
+
+  const s = useStyle(
+    {
+      padding: "0.5rem 0",
+      background: `linear-gradient(119deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) ${mappedGradientPosition}%, rgba(0, 0, 0, 0) 100%)`,
+      opacity: mappedOpacityPosition
+    },
+    [mappedOpacityPosition, mappedGradientPosition]
   );
+  return <GradientWrapper style={s}>{children}</GradientWrapper>;
 };
 const GradientTitle: FC = ({ children }) => {
   return (
@@ -111,20 +110,25 @@ const Title = () => {
     <Opacity opacity={mappedOpacityValue}>
       <AppearTransition duration={1000} delay={700}>
         <PageHeroTitle
+          // Text background animation
           url={"https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"}
         >
           <HeroHeadline>Stanislav Panchenko</HeroHeadline>
+          <span
+            style={{
+              top: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+              position: "absolute"
+            }}
+          >
+            <GradientTitle
+            // Text gradient scroll animation
+            >
+              Stanislav Panchenko
+            </GradientTitle>
+          </span>
         </PageHeroTitle>
-        <span
-          style={{
-            top: 0,
-            left: "50%",
-            transform: "translateX(-50%)",
-            position: "absolute"
-          }}
-        >
-          <GradientTitle>Stanislav Panchenko</GradientTitle>
-        </span>
       </AppearTransition>
       <AppearTransition duration={1000} delay={1400}>
         <HeroSubtitle>

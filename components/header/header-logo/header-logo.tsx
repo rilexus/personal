@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useMediaQuery } from "../../../hooks";
 
 const Styled = styled.div`
+  margin-left: 1rem;
   a {
     color: #00f;
     text-decoration: none;

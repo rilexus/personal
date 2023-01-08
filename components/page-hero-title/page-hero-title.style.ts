@@ -6,6 +6,7 @@ interface PropsI {
 
 export const PageTitleStyled = styled.span`
   display: inline-block;
+  position: relative;
   padding: 0.5rem 0;
   background-image: url(${({ url }: PropsI) => url});
 

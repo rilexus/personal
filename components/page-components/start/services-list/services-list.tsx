@@ -1,7 +1,6 @@
 import * as React from "react";
 import { ListTitleStyled } from "../../../list/list-title/list-title";
 import { ListSubtitleStyled } from "../../../list/list-subtitle/list-subtitle";
-import { ParagraphStyled } from "../../../pragraph";
 import { useRef } from "react";
 import posed from "react-pose";
 import { LiElemStyled } from "../../../list/li-elem/li-elem";
@@ -9,11 +8,6 @@ import { UlList } from "../../../list/ul-list/ul-list.styled";
 import Viewport from "../../../viewport/viewport";
 import { useAppearFromBottom } from "../../../../hooks/useAppearFromBottom";
 
-import { ServiceType } from "@react-microdata/service";
-
-import { ItemOffered, Description, Offer } from "@react-microdata/offer";
-import { ListItem } from "@react-microdata/list-item";
-import styled from "styled-components";
 import {
   LocalBusiness,
   Name as BusinessName,
@@ -31,11 +25,8 @@ import {
   AddressLocality,
   AddressRegion
 } from "@react-microdata/postal-address";
-import { ItemListElement, OfferCatalog } from "@react-microdata/offer-catalog";
 
-const H3 = styled.h3`
-  margin-bottom: 1rem;
-`;
+import ListItemOffer, { MediaTextAlign } from "./ListItemOffer/ListItemOffer";
 
 const LiAnimated = posed(LiElemStyled)({
   visible: {
@@ -103,8 +94,10 @@ const ServicesList = () => {
               content={"https://avatars.githubusercontent.com/u/28537457?v=4"}
             />
           </Funder.Person>
-          <ListTitleStyled>Services</ListTitleStyled>
-          <ListSubtitleStyled>Fullstack Development</ListSubtitleStyled>
+          <MediaTextAlign>
+            <ListTitleStyled>Services</ListTitleStyled>
+            <ListSubtitleStyled>Fullstack Development</ListSubtitleStyled>
+          </MediaTextAlign>
           <HasOfferCatalog.OfferCatalog>
             <UlAnimated
               ref={listAnimationRef}
@@ -112,72 +105,20 @@ const ServicesList = () => {
               pose={listAppeared ? "visible" : "hidden"}
             >
               <LiAnimated key={"Practice"} duration={700}>
-                <ItemListElement itemScope itemType="https://schema.org/Offer">
-                  <ItemOffered.Service>
-                    <ServiceType>
-                      <H3>Frontend Development</H3>
-                    </ServiceType>
-                    <Description>
-                      <ParagraphStyled>
-                        Development of complex frontend systems with React and
-                        plain JavaScript. Familiar with
-                        CSS/SCSS/Styled-Components and the common styling
-                        solutions. I’m a programmer with good understanding of
-                        UX&UI. I know the best practices from programmer&apos;s
-                        and designer&apos;s point of view.
-                      </ParagraphStyled>
-                    </Description>
-                  </ItemOffered.Service>
-                </ItemListElement>
+                <ListItemOffer
+                  title={"Frontend Development"}
+                  description={
+                    "Development of complex frontend systems with React and plain JavaScript. Familiar with CSS/SCSS/Styled-Components and the common styling solutions. I’m a programmer with good understanding of UX&UI. I know the best practices from programmer&apos;s and designer&apos;s point of view."
+                  }
+                />
               </LiAnimated>
               <LiAnimated key={"Full Stack"} duration={700}>
-                <Offer itemProp={"ItemListElement"}>
-                  <ItemOffered.Service>
-                    <ServiceType>
-                      <H3>Backend Development</H3>
-                    </ServiceType>
-                    <Description>
-                      <ParagraphStyled>
-                        Implementation of interfaces to connect the external web
-                        services. Development of REST endpoints or micro
-                        services, mainly with node and nestjs.
-                      </ParagraphStyled>
-                    </Description>
-                  </ItemOffered.Service>
-                </Offer>
-              </LiAnimated>
-              <LiAnimated key={"Process"} duration={700}>
-                <ItemListElement itemScope itemType="https://schema.org/Offer">
-                  <ItemOffered.Service>
-                    <ServiceType>
-                      <H3>UX Analysis</H3>
-                    </ServiceType>
-                    <Description>
-                      <ParagraphStyled>
-                        UI design and UX planing. Its crucial to communicate
-                        with stack holders and future users. Only this way its
-                        possible to develop a valuable solution!
-                      </ParagraphStyled>
-                    </Description>
-                  </ItemOffered.Service>
-                </ItemListElement>
-              </LiAnimated>
-              <LiAnimated key={"Prototyping"} duration={700}>
-                <ItemListElement itemScope itemType="https://schema.org/Offer">
-                  <ItemOffered.Service>
-                    <ServiceType>
-                      <H3>UI Design</H3>
-                    </ServiceType>
-                    <Description>
-                      <ParagraphStyled>
-                        Design is a repetitive process. To adjust the product to
-                        the users core needs, it is necessary to iterate through
-                        the design. A quick prototype and a rough design sketch
-                        always saves a lot of development hours.
-                      </ParagraphStyled>
-                    </Description>
-                  </ItemOffered.Service>
-                </ItemListElement>
+                <ListItemOffer
+                  title={"Backend Development"}
+                  description={
+                    "Implementation of interfaces to connect the external web services. Development of REST endpoints or micro services, mainly with node and nestjs."
+                  }
+                />
               </LiAnimated>
             </UlAnimated>
           </HasOfferCatalog.OfferCatalog>
