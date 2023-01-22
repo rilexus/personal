@@ -179,9 +179,6 @@ const Header = ({}: HeaderPropsI) => {
               <MediaCenter>
                 <Spacer>
                   <MediaPadding>
-                    <Link href={"/examples"}>Examples</Link>
-                  </MediaPadding>
-                  <MediaPadding>
                     <Publications />
                   </MediaPadding>
                   <MediaPadding>
