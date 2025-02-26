@@ -136,6 +136,12 @@ const Publications = ({ children }: any) => {
             </Link>
           </li>
         </Ul>
+        <ListTitle>Websites</ListTitle>
+        <Ul>
+          <Link href={"https://camera-shop-demo.vercel.app/"}>
+            Camera Shop (Demo)
+          </Link>
+        </Ul>
       </Wrapper>
     </div>
   );
