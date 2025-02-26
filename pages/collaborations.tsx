@@ -12,15 +12,16 @@ import PrymListElement from "../page-components/collaborations/PrymListElement";
 import OneAndOne from "../page-components/collaborations/OneAndOne";
 import Unicepta from "../page-components/collaborations/Unicepter";
 
+const prym_logo = "prym_logo.png";
+const dunckelfeld_logo = "dunckelfeld-logo.png";
+const avenga_logo = "avenga_logo.png";
+const snapbus_logo = "snapbus_logo.jpg";
+const oneAndOne =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/240px-1%261_logo.svg.png";
+const unicepter =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdFhzGtxh-KjrwEFEvf-RJ7la3ymxcpJbiNTeXti52hlFd2p-haJtwETghnzgGCQ_fQ&usqp=CAU";
+
 const Collaborations = () => {
-  const prym_logo = "prym_logo.png";
-  const dunckelfeld_logo = "dunckelfeld-logo.png";
-  const avenga_logo = "avenga_logo.png";
-  const snapbus_logo = "snapbus_logo.jpg";
-  const oneAndOne =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/240px-1%261_logo.svg.png";
-  const unicepter =
-    "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/bhk13wldvkqfzrg3wioz";
   return (
     <div>
       <SEO title="Collaborations" />

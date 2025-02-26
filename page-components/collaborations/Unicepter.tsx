@@ -14,12 +14,7 @@ const Unicepta = ({ imgSrc }: any) => {
       name={"unicepta"}
       renderHeader={() => (
         <ElemHeader>
-          <img
-            src={imgSrc}
-            alt="unicepta brand logo"
-            height={205}
-            width={220}
-          />
+          <img src={imgSrc} alt="unicepta brand logo" height={50} width={300} />
         </ElemHeader>
       )}
     >
