@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8080",
     "export": "next export -o docs/",
     "clean": "rm -rf build",
     "deploy": "npm run build && npm run export && npm run clean && git add docs/ && git commit -m \"Deploy docs\" && git push",
@@ -14,19 +14,19 @@
   "dependencies": {
     "@react-microdata/item-list": "1.0.7",
     "@react-microdata/list-item": "1.0.7",
-    "@react-microdata/service": "1.0.7",
-    "@react-microdata/offer": "1.0.7",
-    "@react-microdata/person": "1.0.7",
     "@react-microdata/local-business": "1.0.7",
-    "@react-microdata/postal-address": "1.0.7",
+    "@react-microdata/offer": "1.0.7",
     "@react-microdata/offer-catalog": "1.0.7",
+    "@react-microdata/person": "1.0.7",
+    "@react-microdata/postal-address": "1.0.7",
+    "@react-microdata/service": "1.0.7",
     "@react-microdata/url": "1.0.7",
     "eases": "^1.0.8",
-    "next": "12.1.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^16.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-helmet": "^5.2.1",
-    "react-pose": "^4.0.8",
+    "react-pose": "^4.0.10",
     "remark": "^14.0.2",
     "remark-parse": "^10.0.1",
     "styled-components": "^5.3.5",
@@ -35,8 +35,6 @@
   },
   "devDependencies": {
     "@types/node": "17.0.23",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^5.1.24",
     "@types/uuid": "^8.3.4",
@@ -44,6 +42,6 @@
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.1",
     "prettier": "^1.18.2",
-    "typescript": "4.6.3"
+    "typescript": "6.0.2"
   }
 }

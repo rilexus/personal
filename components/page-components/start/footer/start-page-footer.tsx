@@ -15,13 +15,13 @@ import {
   Image,
   FamilyName,
   HomeLocation,
-  Address
+  Address,
 } from "@react-microdata/person";
 import { sm } from "../../../../css/media-queries";
 import {
   AddressCountry,
   AddressLocality,
-  PostalAddress
+  PostalAddress,
 } from "@react-microdata/postal-address";
 
 const Background = styled.div<{ opacity?: number }>`
@@ -79,14 +79,14 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
               ref={ref}
               style={{
                 margin: "0 35px",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               <div
                 style={{
                   marginBottom: "3rem",
                   display: "flex",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <ImgWrapper>
@@ -104,7 +104,7 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
               <Exlpination>
                 <span>freelance, fullstack web developer located in</span>
                 <HomeLocation.Place as={"span"}>
-                  <Address.PostalAddress>
+                  <Address.PostalAddress as="span">
                     <AddressCountry as={"span"}>Germany</AddressCountry>,{" "}
                     <AddressLocality as={"span"}>Passau</AddressLocality>
                   </Address.PostalAddress>
@@ -133,7 +133,7 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
               style={{
                 display: "inline-block",
                 transform: "rotate(-8deg) translate(18px, 25px)",
-                transformOrigin: "50% 50%"
+                transformOrigin: "50% 50%",
               }}
             >
               <Signature
