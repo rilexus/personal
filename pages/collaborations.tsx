@@ -17,9 +17,9 @@ const dunckelfeld_logo = "dunckelfeld-logo.png";
 const avenga_logo = "avenga_logo.png";
 const snapbus_logo = "snapbus_logo.jpg";
 const oneAndOne =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/240px-1%261_logo.svg.png";
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/3840px-1%261_logo.svg.png";
 const unicepter =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdFhzGtxh-KjrwEFEvf-RJ7la3ymxcpJbiNTeXti52hlFd2p-haJtwETghnzgGCQ_fQ&usqp=CAU";
+  "https://cdn.kom.de/app/uploads/2016/03/unicepta_logo_2019.png";
 
 const Collaborations = () => {
   return (
@@ -32,7 +32,7 @@ const Collaborations = () => {
           <section>
             <div
               style={{
-                marginTop: "20vh"
+                marginTop: "20vh",
               }}
             >
               <H1>Collaborations</H1>
