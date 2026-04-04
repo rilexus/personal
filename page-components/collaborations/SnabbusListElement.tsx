@@ -22,7 +22,9 @@ const SnapbusListElement = ({ imgSrc }: any) => {
           Snapbus is a company based in Cologne which providers a easy way to
           book transportation vehicles.
         </ParagraphStyled>
-        <ExternalLink href={"https://www.snapbus.de/"}>Website</ExternalLink>
+        <ExternalLink href={"https://www.startbase.com/organization/snapbus/"}>
+          View Website: startbase.com
+        </ExternalLink>
       </ElemContentWrapper>
     </DropdownListElement>
   );

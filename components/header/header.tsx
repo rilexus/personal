@@ -27,7 +27,7 @@ const LinksWrapper = styled.div`
 
 export enum HeaderType {
   black = "black",
-  white = "white"
+  white = "white",
 }
 
 const StyledSpacer = styled.div`
@@ -49,7 +49,7 @@ const ListTitle = ({ children }: any) => {
       style={{
         fontSize: "0.8rem",
         color: "#5d5d5d",
-        marginBottom: "0.5rem"
+        marginBottom: "0.5rem",
       }}
     >
       {children}
@@ -92,13 +92,13 @@ const Publications = ({ children }: any) => {
   return (
     <div
       style={{
-        position: "relative"
+        position: "relative",
       }}
       ref={ref}
     >
       <div
         style={{
-          cursor: "pointer"
+          cursor: "pointer",
         }}
         onClick={open}
         onTouchStart={open}
@@ -107,7 +107,7 @@ const Publications = ({ children }: any) => {
       </div>
       <Wrapper
         style={{
-          display: isOpen ? "inherit" : "none"
+          display: isOpen ? "inherit" : "none",
         }}
       >
         <ListTitle>Articles</ListTitle>
@@ -138,9 +138,20 @@ const Publications = ({ children }: any) => {
         </Ul>
         <ListTitle>Websites</ListTitle>
         <Ul>
-          <Link href={"https://camera-shop-demo.vercel.app/"}>
-            Camera Shop (Demo)
-          </Link>
+          <li>
+            <Link href={"https://camera-shop-demo.vercel.app/"}>
+              Camera Shop (Demo)
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://gusto.tips/"}>Gusto Tips</Link>
+          </li>
+          <li>
+            <Link href={"https://www.formservice.dev/en"}>Form Service</Link>
+          </li>
+          <li>
+            <Link href={"https://www.dragmail.app/"}>Drag Mail</Link>
+          </li>
         </Ul>
       </Wrapper>
     </div>
