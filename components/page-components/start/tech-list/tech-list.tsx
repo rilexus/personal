@@ -10,7 +10,6 @@ import { TechScrollView } from "./components/tech-scroll-view/tech-scroll-view";
 import { Section } from "../../../section/Section";
 import { FadeInTransition } from "./transitions/FadeIn.transition";
 import { Flex } from "../../../flex/Flex";
-import { ItemList } from "@react-microdata/item-list";
 import techIcons from "./icons.data";
 
 const TechWrapper = styled.div`
@@ -34,22 +33,20 @@ export default function TechList() {
               }}
             >
               <Align position={"center"}>
-                <ItemList>
-                  <AnimatePresence mode="wait" initial>
-                    {currIconInfo.map(({ name, desc }, idx) => (
-                      <FadeInTransition key={`curr-icon-${name}`} animate="enter" exit="exit">
-                        <h3>{name}</h3>
-                        <ParagraphStyled
-                          style={{
-                            height: "200px"
-                          }}
-                        >
-                          {desc}
-                        </ParagraphStyled>
-                      </FadeInTransition>
-                    ))}
-                  </AnimatePresence>
-                </ItemList>
+                <AnimatePresence mode="wait" initial>
+                  {currIconInfo.map(({ name, desc }) => (
+                    <FadeInTransition key={`curr-icon-${name}`} animate="enter" exit="exit">
+                      <h3>{name}</h3>
+                      <ParagraphStyled
+                        style={{
+                          height: "200px"
+                        }}
+                      >
+                        {desc}
+                      </ParagraphStyled>
+                    </FadeInTransition>
+                  ))}
+                </AnimatePresence>
               </Align>
             </div>
           </CenterMargin>

@@ -21,6 +21,7 @@ import { CenterMargin } from "../../components/center-margin/center-margin.style
 import { IntroText } from "../../components/intro-text/intro-text.styled";
 import ScrollDownIcon from "../../components/ScrollDownIcon/scroll-down-icon";
 import ServicesList from "../../components/page-components/start/services-list/services-list";
+import TutoringSection from "../../components/page-components/start/tutoring/tutoring-section";
 import TechList from "../../components/page-components/start/tech-list/tech-list";
 import LetsChatSection from "../../components/page-components/start/lets-chat/lets-chat";
 import StartPageFooter from "../../components/page-components/start/footer/start-page-footer";
@@ -172,6 +173,7 @@ const Home = () => {
             </Viewport>
           </Section>
           <ServicesList />
+          <TutoringSection />
         </Layout>
         <TechList />
         <LetsChatSection />

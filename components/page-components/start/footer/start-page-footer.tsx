@@ -8,21 +8,7 @@ import { IconLink } from "../../../icon-link";
 import { Signature } from "../../../Signature";
 import { useRef } from "react";
 import { useIsInView } from "../../../../hooks/useIsinView";
-import {
-  Person,
-  Name,
-  SameAs,
-  Image,
-  FamilyName,
-  HomeLocation,
-  Address,
-} from "@react-microdata/person";
 import { sm } from "../../../../css/media-queries";
-import {
-  AddressCountry,
-  AddressLocality,
-  PostalAddress,
-} from "@react-microdata/postal-address";
 
 const Background = styled.div<{ opacity?: number }>`
   background-color: #fbfcfd;
@@ -75,7 +61,7 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
       <Background>
         <Layout>
           <CenterMargin>
-            <Person
+            <div
               ref={ref}
               style={{
                 margin: "0 35px",
@@ -90,45 +76,33 @@ const StartPageFooter = ({}: StartPageFooterPropsI) => {
                 }}
               >
                 <ImgWrapper>
-                  <Image
-                    as={"img"}
+                  <img
                     src="https://avatars.githubusercontent.com/u/28537457?v=4"
                     alt=""
                   />
                 </ImgWrapper>
               </div>
-              <Greeting>
-                Hi! I’m <Name as={"span"}>Stanislav</Name>{" "}
-                <FamilyName as={"span"}>Panchenko</FamilyName>
-              </Greeting>
+              <Greeting>Hi! I’m Stanislav Panchenko</Greeting>
               <Exlpination>
-                <span>freelance, fullstack web developer located in</span>
-                <HomeLocation.Place as={"span"}>
-                  <Address.PostalAddress as="span">
-                    <AddressCountry as={"span"}>Germany</AddressCountry>,{" "}
-                    <AddressLocality as={"span"}>Passau</AddressLocality>
-                  </Address.PostalAddress>
-                </HomeLocation.Place>
+                <span>
+                  freelance, fullstack web developer located in Germany,
+                  Passau
+                </span>
               </Exlpination>
               <ParagraphStyled>
                 <span>If you have a project in mind, drop me a message.</span>
               </ParagraphStyled>
               <CenterIcon>
-                <SameAs as={"meta"} content={"https://github.com/rilexus"} />
                 <IconLink url={"https://github.com/rilexus"}>
                   {Icons.github}
                 </IconLink>
-                <SameAs
-                  as={"meta"}
-                  content={"https://www.linkedin.com/in/stanislav-p-98b254192/"}
-                />
                 <IconLink
                   url={"https://www.linkedin.com/in/stanislav-p-98b254192/"}
                 >
                   {Icons.linkedin}
                 </IconLink>
               </CenterIcon>
-            </Person>
+            </div>
             <div
               style={{
                 display: "inline-block",

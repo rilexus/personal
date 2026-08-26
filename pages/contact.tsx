@@ -1,4 +1,5 @@
 import * as React from "react";
+import Head from "next/head";
 import Layout from "../components/layout/layout";
 import Header from "../components/header/header";
 import Align from "../components/align/align";
@@ -10,15 +11,8 @@ import styled from "styled-components";
 import { ParagraphStyled } from "../components/pragraph";
 import { CenterMargin } from "../components/center-margin/center-margin.styled";
 import Email from "../components/email/email";
-import {
-  FamilyName,
-  GivenName,
-  MakesOffer,
-  Person,
-  SameAs
-} from "@react-microdata/person";
-import { Url } from "@react-microdata/offer";
-import { Email as EmailItemProp } from "@react-microdata/person/dist/src/itemProps/Email";
+import { SchemaScript } from "../components/schema-org/SchemaScript";
+import { CONTACT_PERSON_SCHEMA } from "../components/schema-org/schema-data";
 import { Flex } from "../components/flex/Flex";
 
 export const LetsChat = styled.div`
@@ -44,6 +38,9 @@ const growVariants = {
 const Contact = () => {
   return (
     <div>
+      <Head>
+        <SchemaScript schema={CONTACT_PERSON_SCHEMA} />
+      </Head>
       <SEO title="Contact" />
       <Header />
       <PageTitle title={"Contact"} />
@@ -76,43 +73,11 @@ const Contact = () => {
                   </ParagraphStyled>
                 </CenterMargin>
 
-                <Person>
-                  <MakesOffer.Offer
-                    style={{
-                      display: "none"
-                    }}
-                  >
-                    <Url>https://stanislavpanchenko.de#service-list</Url>
-                  </MakesOffer.Offer>
-                  <GivenName
-                    style={{
-                      display: "none"
-                    }}
-                  >
-                    Stanislav
-                  </GivenName>
-                  <FamilyName
-                    style={{
-                      display: "none"
-                    }}
-                  >
-                    Panchenko
-                  </FamilyName>
-                  <SameAs.URL
-                    style={{
-                      display: "none"
-                    }}
-                  >
-                    https://www.linkedin.com/in/stanislav-p-98b254192/
-                  </SameAs.URL>
-                  <EmailItemProp>
-                    <Flex justify={"center"} align={"center"}>
-                      <MainButton>
-                        <Email />
-                      </MainButton>
-                    </Flex>
-                  </EmailItemProp>
-                </Person>
+                <Flex justify={"center"} align={"center"}>
+                  <MainButton>
+                    <Email />
+                  </MainButton>
+                </Flex>
               </div>
             </motion.div>
           </AnimatePresence>
