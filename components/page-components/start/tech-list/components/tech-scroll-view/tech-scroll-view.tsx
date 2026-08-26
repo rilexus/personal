@@ -1,5 +1,5 @@
 import * as React from "react";
-import posed from "react-pose";
+import { motion } from "framer-motion";
 import ScrollView from "../../scroll-view/scroll-view";
 import { TechIconAnimated } from "../tech-icon/tech-icon";
 import { useRef, VFC } from "react";
@@ -15,23 +15,18 @@ import {
 } from "@react-microdata/list-item";
 import techIcons from "../../icons.data";
 
-const ChildStaggger = posed.div({
+const childStaggerVariants = {
   visible: {
-    staggerChildren: 100
+    transition: { staggerChildren: 0.1 }
   },
   hidden: {
-    staggerChildren: 10
-  },
-  init: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-evenly"
+    transition: { staggerChildren: 0.01 }
   }
-});
+};
 export const TechScrollView: VFC<{ onMouseOver: (id: number) => void }> = ({
   onMouseOver
 }) => {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   const animate = useIsInView(ref);
   return (
     <ScrollView>
@@ -43,7 +38,16 @@ export const TechScrollView: VFC<{ onMouseOver: (id: number) => void }> = ({
         >
           Technology used by Stanislav Panchenko
         </Description>
-        <ChildStaggger ref={ref} pose={animate ? "visible" : "hidden"}>
+        <motion.div
+          ref={ref}
+          variants={childStaggerVariants}
+          animate={animate ? "visible" : "hidden"}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly"
+          }}
+        >
           {techIcons.map((icon, idx) => (
             <span
               key={`tech-icon-${idx}`}
@@ -65,7 +69,7 @@ export const TechScrollView: VFC<{ onMouseOver: (id: number) => void }> = ({
               </ItemListElement>
             </span>
           ))}
-        </ChildStaggger>
+        </motion.div>
       </ItemList>
     </ScrollView>
   );

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { PoseGroup } from "react-pose";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ParagraphStyled } from "../../../pragraph";
 import { CenterMargin } from "../../../center-margin/center-margin.styled";
@@ -35,9 +35,9 @@ export default function TechList() {
             >
               <Align position={"center"}>
                 <ItemList>
-                  <PoseGroup animateOnMount enterPose={"enter"}>
+                  <AnimatePresence mode="wait" initial>
                     {currIconInfo.map(({ name, desc }, idx) => (
-                      <FadeInTransition key={`curr-icon-${name}`}>
+                      <FadeInTransition key={`curr-icon-${name}`} animate="enter" exit="exit">
                         <h3>{name}</h3>
                         <ParagraphStyled
                           style={{
@@ -48,7 +48,7 @@ export default function TechList() {
                         </ParagraphStyled>
                       </FadeInTransition>
                     ))}
-                  </PoseGroup>
+                  </AnimatePresence>
                 </ItemList>
               </Align>
             </div>

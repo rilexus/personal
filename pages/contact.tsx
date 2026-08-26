@@ -4,7 +4,7 @@ import Header from "../components/header/header";
 import Align from "../components/align/align";
 import PageTitle from "../components/page-title/page-title";
 import SEO from "../components/seo";
-import posed, { PoseGroup } from "react-pose";
+import { motion, AnimatePresence } from "framer-motion";
 import MainButton from "../components/main-button/main-button";
 import styled from "styled-components";
 import { ParagraphStyled } from "../components/pragraph";
@@ -29,20 +29,17 @@ export const LetsChat = styled.div`
   color: #111;
 `;
 
-const GrowAnimation = posed.div({
+const growVariants = {
   init: {
     opacity: 0,
     scale: 0.8
   },
-  enter: {
+  enter: (duration: number) => ({
     opacity: 1,
     scale: 1,
-    transition: ({ duration }: any) => ({
-      opacity: { duration },
-      scale: { duration }
-    })
-  }
-});
+    transition: { duration: duration / 1000 }
+  })
+};
 
 const Contact = () => {
   return (
@@ -57,8 +54,15 @@ const Contact = () => {
               marginTop: "30vh"
             }}
           ></div>
-          <PoseGroup animateOnMount exitPose={"enter"}>
-            <GrowAnimation key={"grow-animation-button"} duration={700}>
+          <AnimatePresence initial>
+            <motion.div
+              key={"grow-animation-button"}
+              variants={growVariants}
+              custom={700}
+              initial="init"
+              animate="enter"
+              exit="enter"
+            >
               <div
                 style={{
                   marginTop: "10vh"
@@ -110,8 +114,8 @@ const Contact = () => {
                   </EmailItemProp>
                 </Person>
               </div>
-            </GrowAnimation>
-          </PoseGroup>
+            </motion.div>
+          </AnimatePresence>
         </Align>
       </Layout>
     </div>

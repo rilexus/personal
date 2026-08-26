@@ -2,7 +2,7 @@ import * as React from "react";
 import { ListTitleStyled } from "../../../list/list-title/list-title";
 import { ListSubtitleStyled } from "../../../list/list-subtitle/list-subtitle";
 import { useRef } from "react";
-import posed from "react-pose";
+import { motion, Variants } from "framer-motion";
 import { LiElemStyled } from "../../../list/li-elem/li-elem";
 import { UlList } from "../../../list/ul-list/ul-list.styled";
 import Viewport from "../../../viewport/viewport";
@@ -28,33 +28,28 @@ import {
 
 import ListItemOffer, { MediaTextAlign } from "./ListItemOffer/ListItemOffer";
 
-const LiAnimated = posed(LiElemStyled)({
-  visible: {
+const LiAnimated = motion.create(LiElemStyled);
+const liVariants: Variants = {
+  visible: (duration: number) => ({
     y: 0,
     opacity: 1,
-    transition: ({ duration }: any) => ({
-      opacity: { ease: "easeOut", duration: duration },
-      y: { ease: "easeOut", duration: duration }
-    })
-  },
-  hidden: {
+    transition: { ease: "easeOut", duration: duration / 1000 }
+  }),
+  hidden: (duration: number) => ({
     y: 75,
     opacity: 0,
-    transition: ({ duration }: any) => ({
-      opacity: { ease: "easeOut", duration: duration },
-      y: { ease: "easeOut", duration: duration }
-    })
-  }
-});
-const UlAnimated = posed(UlList)({
-  visible: {
-    staggerChildren: ({ staggerChildren }: any) => staggerChildren
-  },
-  hidden: {
-    // time children
-    staggerChildren: ({ staggerChildren }: any) => staggerChildren
-  }
-});
+    transition: { ease: "easeOut", duration: duration / 1000 }
+  })
+};
+const UlAnimated = motion.create(UlList);
+const ulVariants = {
+  visible: (staggerChildren: number) => ({
+    transition: { staggerChildren: staggerChildren / 1000 }
+  }),
+  hidden: (staggerChildren: number) => ({
+    transition: { staggerChildren: staggerChildren / 1000 }
+  })
+};
 
 const ServicesList = () => {
   const listAnimationRef = useRef(null);
@@ -101,10 +96,12 @@ const ServicesList = () => {
           <HasOfferCatalog.OfferCatalog>
             <UlAnimated
               ref={listAnimationRef}
-              staggerChildren={200}
-              pose={listAppeared ? "visible" : "hidden"}
+              variants={ulVariants}
+              custom={200}
+              initial="hidden"
+              animate={listAppeared ? "visible" : "hidden"}
             >
-              <LiAnimated key={"Practice"} duration={700}>
+              <LiAnimated key={"Practice"} variants={liVariants} custom={700}>
                 <ListItemOffer
                   title={"Frontend Development"}
                   description={
@@ -112,7 +109,7 @@ const ServicesList = () => {
                   }
                 />
               </LiAnimated>
-              <LiAnimated key={"Full Stack"} duration={700}>
+              <LiAnimated key={"Full Stack"} variants={liVariants} custom={700}>
                 <ListItemOffer
                   title={"Backend Development"}
                   description={

@@ -1,7 +1,7 @@
 import * as React from "react";
 import useHover from "../../../../../../hooks/useHover";
 import Tooltip from "../../../../../Tooltip/Tooltip";
-import posed from "react-pose";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { forwardRef } from "react";
 import { Image, Name } from "@react-microdata/list-item";
@@ -57,19 +57,24 @@ const Icon = forwardRef(function Icon({ icon }: any, ref: any) {
     </IconWrapper>
   );
 });
-export const TechIconAnimated = posed(Icon)({
+const iconVariants = {
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 250
+      duration: 0.25
     }
   },
   hidden: {
     opacity: 0,
     scale: 0.2,
     transition: {
-      duration: 10
+      duration: 0.01
     }
   }
-});
+};
+
+const MotionIcon = motion.create(Icon);
+export const TechIconAnimated = (props: any) => (
+  <MotionIcon variants={iconVariants} {...props} />
+);
