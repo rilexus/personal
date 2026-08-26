@@ -88,6 +88,7 @@ const Publications = ({ children }: any) => {
   };
 
   const ref = useClickOutside(close);
+  //
 
   return (
     <div
