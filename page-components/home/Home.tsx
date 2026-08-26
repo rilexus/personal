@@ -3,7 +3,7 @@ import styled from "styled-components";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import {
   EasingFunctionNames,
-  useMapScrollToValue
+  useMapScrollToValue,
 } from "../../hooks/useMapedValue";
 import Header from "../../components/header/header";
 import PageTitle from "../../components/page-title/page-title";
@@ -67,7 +67,7 @@ const Gradient: FC = ({ children }) => {
     100,
     0,
     height * 2 - 200,
-    EasingFunctionNames.expoIn
+    EasingFunctionNames.expoIn,
   );
 
   const mappedOpacityPosition = useMapScrollToValue(
@@ -75,16 +75,16 @@ const Gradient: FC = ({ children }) => {
     1,
     0,
     height * 2 - 300,
-    EasingFunctionNames.expoIn
+    EasingFunctionNames.expoIn,
   );
 
   const s = useStyle(
     {
       padding: "0.5rem 0",
       background: `linear-gradient(119deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) ${mappedGradientPosition}%, rgba(0, 0, 0, 0) 100%)`,
-      opacity: mappedOpacityPosition
+      opacity: mappedOpacityPosition,
     },
-    [mappedOpacityPosition, mappedGradientPosition]
+    [mappedOpacityPosition, mappedGradientPosition],
   );
   return <GradientWrapper style={s}>{children}</GradientWrapper>;
 };
@@ -103,7 +103,7 @@ const Title = () => {
     0,
     0,
     height * 2,
-    EasingFunctionNames.expoIn
+    EasingFunctionNames.expoIn,
   );
 
   return (
@@ -114,20 +114,6 @@ const Title = () => {
           url={"https://media.giphy.com/media/3o6ZtrcBDLanIMbdRe/source.gif"}
         >
           <HeroHeadline>Stanislav Panchenko</HeroHeadline>
-          <span
-            style={{
-              top: 0,
-              left: "50%",
-              transform: "translateX(-50%)",
-              position: "absolute"
-            }}
-          >
-            <GradientTitle
-            // Text gradient scroll animation
-            >
-              Stanislav Panchenko
-            </GradientTitle>
-          </span>
         </PageHeroTitle>
       </AppearTransition>
       <AppearTransition duration={1000} delay={1400}>
@@ -155,7 +141,7 @@ const Home = () => {
     0,
     0,
     height * 2,
-    EasingFunctionNames.expoIn
+    EasingFunctionNames.expoIn,
   );
   useEffect(() => {
     printFace();

@@ -140,18 +140,7 @@ const Publications = ({ children }: any) => {
         <ListTitle>Websites</ListTitle>
         <Ul>
           <li>
-            <Link href={"https://camera-shop-demo.vercel.app/"}>
-              Camera Shop (Demo)
-            </Link>
-          </li>
-          <li>
             <Link href={"https://gusto.tips/"}>Gusto Tips</Link>
-          </li>
-          <li>
-            <Link href={"https://www.formservice.dev/en"}>Form Service</Link>
-          </li>
-          <li>
-            <Link href={"https://www.dragmail.app/"}>Drag Mail</Link>
           </li>
         </Ul>
       </Wrapper>
