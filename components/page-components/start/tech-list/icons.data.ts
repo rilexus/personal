@@ -1,5 +1,15 @@
 export const techIcons = [
   {
+    name: "NextJS",
+    width: 50,
+    height: 50,
+    url: "https://nextjs.org/",
+    src:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95lSoWhDR9VpK65XN6rIVyormYlX6ZiGjWd2LkM34tQ&s=10",
+    desc:
+      "Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.",
+  },
+  {
     name: "MCP",
     width: 50,
     height: 50,
