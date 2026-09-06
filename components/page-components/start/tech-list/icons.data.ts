@@ -1,5 +1,16 @@
 export const techIcons = [
   {
+    name: "MCP",
+    width: 50,
+    height: 50,
+    url:
+      "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+    src:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Model_Context_Protocol_logo.svg/500px-Model_Context_Protocol_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    desc:
+      "MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems.",
+  },
+  {
     name: "JavaScript",
     width: 50,
     height: 50,
